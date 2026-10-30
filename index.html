@@ -140,8 +140,8 @@ section.s{position:relative;padding:140px 0}
 .card .for{margin-top:10px;font-size:14px;color:var(--muted)}
 .card p{margin-top:18px;font-size:16px;color:var(--ink2)}
 .card .dl{margin-top:26px;display:grid;gap:10px}
-.card .dl li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink2)}
-.card .dl li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:6px;background:rgba(77,123,255,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238eabff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 8.5 2.6 2.5L12 5.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.card .dl li{position:relative;padding-left:30px;font-size:15px;color:var(--ink2)}
+.card .dl li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:6px;background:rgba(77,123,255,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238eabff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 8.5 2.6 2.5L12 5.5'/%3E%3C/svg%3E") center/12px no-repeat}
 .card .res{margin-top:28px;padding-top:22px;border-top:1px dashed var(--line);font-size:15px;color:var(--ink2)}
 .card .res b{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2);margin-right:10px}
 .card.big{grid-column:span 4}
@@ -210,15 +210,30 @@ section.s{position:relative;padding:140px 0}
 .foot-note{margin-top:22px;font-size:12.5px;color:var(--dim)}
 .foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
 
-/* automation */
-.auto{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
-.auto h2{font-size:clamp(32px,3.4vw,46px)}
-.auto img{border-radius:20px;border:1px solid var(--line);box-shadow:0 40px 100px -40px rgba(0,0,0,.9)}
-.steps3{margin-top:30px;display:grid;gap:14px}
-.steps3>div{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:18px 20px;border:1px solid var(--line2);border-radius:16px;background:rgba(255,255,255,.02)}
-.steps3 i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(77,123,255,.15);color:var(--blue2);font:700 15px/1 var(--mono)}
-.steps3 b{display:block;font-size:17px}
-.steps3 span{display:block;margin-top:3px;font-size:14px;color:var(--muted)}
+/* growth */
+.growth{background:radial-gradient(900px 500px at 85% 10%,rgba(42,92,255,.12),transparent 60%)}
+.pipe{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pipe::before{content:"";position:absolute;left:4%;right:4%;top:31px;height:2px;background:linear-gradient(90deg,transparent,rgba(77,123,255,.5) 10%,rgba(77,123,255,.5) 90%,transparent)}
+.pipe::after{content:"";position:absolute;top:27px;left:4%;width:90px;height:10px;border-radius:10px;background:radial-gradient(closest-side,#cfdcff,rgba(77,123,255,.6),transparent);filter:blur(1px);animation:pulse 4.5s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes pulse{from{left:2%;opacity:0}10%{opacity:1}90%{opacity:1}to{left:calc(96% - 90px);opacity:0}}
+.pipe>div{position:relative;padding:0 6px}
+.pipe small{position:relative;z-index:1;display:grid;place-items:center;width:64px;height:64px;border-radius:20px;border:1px solid rgba(142,171,255,.4);background:#0b1124;font:600 15px/1 var(--mono);color:var(--blue2);box-shadow:0 0 0 6px var(--bg),0 10px 30px -10px rgba(77,123,255,.6)}
+.pipe .man small{border-color:rgba(255,195,92,.55);color:#ffd58c}
+.pipe b{display:block;margin-top:22px;font-size:22px;font-weight:800}
+.pipe span{display:block;margin-top:8px;font-size:14px;line-height:1.65;color:var(--muted)}
+.pipe .man b::after{content:"人";margin-left:10px;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:600;vertical-align:3px;background:rgba(255,195,92,.14);color:#ffd58c}
+.caps{margin-top:64px;display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:18px}
+.caps .card{display:flex;flex-direction:column}
+.caps h3{font-size:24px}
+.modes{margin-top:22px;display:grid;gap:10px}
+.modes div{padding:14px 16px;border-radius:14px;border:1px solid var(--line2);background:rgba(255,255,255,.02)}
+.modes b{font-size:15px}
+.modes span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
+.caps .guard{margin-top:auto;padding-top:22px}
+.shot{margin-top:22px;flex:1;display:flex;flex-direction:column}
+.shot img{flex:1;min-height:200px;width:100%;border-radius:14px;border:1px solid var(--line);object-fit:cover;object-position:left top;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .shot img{transform:scale(1.03)}
+.shot figcaption{margin-top:12px;font-size:13px;color:var(--muted)}
 
 /* method */
 .method{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden}
@@ -262,7 +277,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .visual{max-width:460px;margin-top:20px}
   .bento{grid-template-columns:1fr 1fr}
   .card.big,.card.tall,.card.half,.card.wide{grid-column:span 2;grid-row:auto}
-  .case-top,.film,.auto{grid-template-columns:1fr}
+  .case-top,.film{grid-template-columns:1fr}
+  .pipe{grid-template-columns:repeat(3,1fr);row-gap:40px}
+  .pipe::before,.pipe::after{display:none}
+  .caps{grid-template-columns:1fr 1fr}
+  .caps .card:first-child{grid-column:span 2}
   .metrics{grid-template-columns:1fr 1fr}
   .method{grid-template-columns:1fr 1fr}
   .method div:nth-child(2){border-right:0}
@@ -291,6 +310,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .method div:last-child{border-bottom:0}
   .bar5{grid-template-columns:1fr 1fr}
   .ways{grid-template-columns:1fr}
+  .pipe{grid-template-columns:1fr 1fr}
+  .caps{grid-template-columns:1fr}
+  .caps .card:first-child{grid-column:auto}
   .chip{font-size:11.5px;padding:8px 11px}
   .chip.c2{right:-2%}
   .scroll-hint{display:none}
@@ -312,7 +334,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <nav class="links" id="links">
       <a href="#services">业务</a>
       <a href="#case">案例</a>
-      <a href="#auto">自动化</a>
+      <a href="#growth">获客系统</a>
       <a href="#method">方法</a>
       <a class="btn primary sm" href="#contact">预约业务诊断</a>
     </nav>
@@ -445,7 +467,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <span class="no">05 · AUTOMATION</span>
         <h3>日常流程自动化</h3>
         <div class="for">邮件、日报、批量开发信、资料整理</div>
-        <p>每天 08:30 自动分类邮件、起草回复；让 AI <strong>自己操作 Outlook</strong> 把一批开发信发完。<strong>只起草、人确认、留记录</strong>。</p>
+        <p>每天 08:30 自动分类邮件、起草回复，资料自动归档、出日报。<strong>只起草、人确认、留记录</strong>。</p>
         <div class="res"><b>RESULT</b>重复动作交出去，<strong>老板只做判断</strong>。</div>
       </article>
     </div>
@@ -495,20 +517,49 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   </div>
 </section>
 
-<!-- AUTOMATION -->
-<section class="s" id="auto">
-  <div class="wrap auto">
-    <div class="rv">
-      <span class="eyebrow">Computer Use · 获客实例</span>
-      <div class="head" style="margin-bottom:0"><h2>AI 自己操作 Outlook，<br>把一批开发信<span class="grad">发完</span>。</h2></div>
-      <div class="steps3">
-        <div><i>A</i><div><b>交代任务</b><span>一张名单表，一封范本</span></div></div>
-        <div><i>B</i><div><b>它自己操作 Outlook</b><span>看着屏幕填收件人、贴正文、点发送</span></div></div>
-        <div><i>C</i><div><b>发完自己核对</b><span>3 分钟发完一批，再逐封核对</span></div></div>
-      </div>
-      <p class="foot-note">不用配接口，用你自己的邮箱和签名。护栏：先发给自己检查 · 限量、间隔发 · 发欧盟前确认当地规定。</p>
+<!-- GROWTH -->
+<section class="s growth" id="growth">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Growth Engine · 获客系统</span>
+      <h2>从找到客户到成交，<br><span class="grad">一条线交给 AI 跑</span>。</h2>
+      <p>网站和内容负责<strong>被找到</strong>，AI 负责<strong>主动找、接得住、跟到底</strong>；人只在<strong>报价、合同、收款</strong>时出手。</p>
     </div>
-    <img class="rv d1" src="assets/case/outlook-sent.jpg" alt="Outlook 已发送的开发信（收件人已打码）" loading="lazy">
+
+    <div class="pipe rv">
+      <div><small>01</small><b>获客</b><span>客户画像 · 名单导入<br>AI 按画像打分</span></div>
+      <div><small>02</small><b>建联</b><span>个性化开发信<br>每日限量 · 自动跟进</span></div>
+      <div><small>03</small><b>承接</b><span>知识库客服 7×24<br>复杂问题转人工</span></div>
+      <div class="man"><small>04</small><b>成交</b><span>报价 · 合同 · 收款<br>人来拍板</span></div>
+      <div><small>05</small><b>复盘</b><span>回复与转化<br>没答好的每周补回</span></div>
+    </div>
+
+    <div class="caps">
+      <article class="card rv">
+        <span class="no">A · OUTREACH ENGINE</span>
+        <h3>主动建联引擎</h3>
+        <p>导入达人或经销商名单，AI <strong>按你的画像打分</strong>、起草开发信、<strong>收回复并自动跟进</strong>，对方回信它先起草回复。</p>
+        <div class="modes"><div><b>审核模式</b><span>每封信你点「通过」才发</span></div><div><b>自动模式</b><span>改动少了再放权，只放行不需要人看的</span></div></div>
+        <div class="guard"><span>TikTok 达人</span><span>B 端客户</span><span>企业邮箱收发</span><span>xlsx / csv 导入</span></div>
+      </article>
+      <article class="card rv d1">
+        <span class="no">B · COMPUTER USE</span>
+        <h3>没有接口，也能发</h3>
+        <p>AI <strong>看着屏幕操作 Outlook</strong>：填收件人、贴正文、点发送，用你自己的邮箱和签名。</p>
+        <figure class="shot"><img src="assets/case/outlook-sent.jpg" alt="Outlook 已发送的开发信（收件人已打码）" loading="lazy"><figcaption>实测：一批德语开发信 <strong>3 分钟发完</strong>，再逐封核对</figcaption></figure>
+      </article>
+      <article class="card rv d2">
+        <span class="no">C · GUARDRAILS</span>
+        <h3>放权，但不失控</h3>
+        <ul class="dl">
+          <li>提到<strong>佣金、价格、合同、退款</strong>，自动转人工</li>
+          <li>对方说退订，<strong>立刻停发</strong></li>
+          <li>每天新建联有上限，间隔发送</li>
+          <li><strong>一键暂停</strong>，每个动作留记录</li>
+          <li>放权参考：人改得越少，越可以交给自动</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
