@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统</title>
-<meta name="description" content="觅咪科技帮企业把 AI 落到具体业务：AI 实战训练营、智能客服与主动获客、官网与 GEO/SEO 优化、AI 宣传片与内容生产。">
+<meta name="description" content="觅咪科技为企业提供 AI 咨询、企业培训和数字化转型落地：知识库与智能客服、AI 获客系统、官网与 GEO/SEO、AI 内容生产、流程自动化。">
 <meta name="theme-color" content="#05070c">
 <link rel="icon" href="assets/mimi-mark.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统">
-<meta property="og:description" content="教团队用起来，把客服和获客交给 AI 跑，让客户和 AI 都找得到你。">
+<meta property="og:description" content="AI 咨询、企业培训、数字化转型落地：先诊断，再培训，最后把系统搭起来、跑起来。">
 <meta property="og:image" content="assets/mimi-mark-1024.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 落地服务：AI 实战训练营、智能客服与主动获客、官网与 GEO/SEO 优化、AI 宣传片与内容生产。"}
+{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","knowsAbout":["AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
 </script>
 <style>
 :root{
@@ -158,6 +158,27 @@ section.s{position:relative;padding:140px 0}
 .guard{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
 .guard span{font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:rgba(255,255,255,.02)}
 
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.svc .card{display:flex;flex-direction:column}
+.svc .card .res{margin-top:auto;padding-top:22px}
+.svc .card .dl{margin-bottom:28px}
+.svc .wide2{grid-column:span 2}
+.tr{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center}
+.tr .mock{margin-top:0}
+.mods{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mods a{padding:16px 16px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(5,8,18,.5);transition:border-color .3s,background .3s,transform .3s}
+.mods a:hover{border-color:rgba(142,171,255,.45);background:rgba(77,123,255,.1);transform:translateY(-2px)}
+.mods b{display:block;font-size:15.5px}
+.mods span{display:block;margin-top:4px;font-size:13px;line-height:1.5;color:var(--muted)}
+.open-wrap{padding:0 0 40px}
+.open{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:40px 44px;border-radius:24px;border:1px dashed rgba(142,171,255,.3);background:linear-gradient(120deg,rgba(77,123,255,.08),rgba(255,255,255,.01))}
+.open h3{margin-top:16px;font-size:clamp(24px,2.4vw,32px);font-weight:800;line-height:1.3}
+.open p{margin-top:14px;font-size:15.5px;color:var(--ink2)}
+.open-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.open-side .days{margin-top:0;width:100%}
+.open-side .days b{margin-top:8px;font-size:14px}
+
 /* platform mock */
 .mock{margin-top:28px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.7);overflow:hidden}
 .mock .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line2);font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--dim)}
@@ -276,6 +297,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .hero .wrap{grid-template-columns:1fr}
   .visual{max-width:460px;margin-top:20px}
   .bento{grid-template-columns:1fr 1fr}
+  .tr{grid-template-columns:1fr}
+  .mods{grid-template-columns:1fr 1fr}
+  .open{grid-template-columns:1fr;padding:32px 28px}
   .card.big,.card.tall,.card.half,.card.wide{grid-column:span 2;grid-row:auto}
   .case-top,.film{grid-template-columns:1fr}
   .pipe{grid-template-columns:repeat(3,1fr);row-gap:40px}
@@ -310,6 +334,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .method div:last-child{border-bottom:0}
   .bar5{grid-template-columns:1fr 1fr}
   .ways{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr}
+  .svc .wide2{grid-column:auto}
+  .mods{grid-template-columns:1fr}
+  .open-side .days{grid-template-columns:repeat(3,1fr)}
   .pipe{grid-template-columns:1fr 1fr}
   .caps{grid-template-columns:1fr}
   .caps .card:first-child{grid-column:auto}
@@ -332,11 +360,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="wrap">
     <a class="brand" href="#top" aria-label="觅咪科技 首页"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
     <nav class="links" id="links">
-      <a href="#services">业务</a>
+      <a href="#services">服务</a>
       <a href="#case">案例</a>
       <a href="#growth">获客系统</a>
       <a href="#method">方法</a>
-      <a class="btn primary sm" href="#contact">预约业务诊断</a>
+      <a class="btn primary sm" href="#contact">预约咨询</a>
     </nav>
     <button class="menu" id="menu" aria-label="菜单"><span></span><span></span><span></span></button>
   </div>
@@ -348,17 +376,17 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="grid-bg"></div>
   <div class="wrap">
     <div>
-      <div class="pill rv"><i>MIMI TECH</i>企业 AI 落地 · 从培训到上线</div>
+      <div class="pill rv"><i>MIMI TECH</i>AI 咨询 · 企业培训 · 数字化转型</div>
       <h1 class="rv d1">把 AI 变成<br>你公司的<br><span class="grad">工作系统</span>。</h1>
-      <p class="lead rv d2">觅咪科技做三件事：<strong>教团队用起来</strong>，<strong>把客服和获客交给 AI 跑</strong>，<strong>让客户和 AI 都找得到你</strong>。不讲概念，每一项都交付一个能用的结果。</p>
+      <p class="lead rv d2">觅咪科技为企业提供 <strong>AI 咨询</strong>、<strong>企业培训</strong>和<strong>数字化转型落地</strong>：先诊断哪里值得用 AI，再让团队会用，最后把系统搭起来、跑起来。</p>
       <div class="cta rv d3">
-        <a class="btn primary" href="#contact">预约一次业务诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn ghost" href="#case">看真实案例</a>
+        <a class="btn primary" href="#contact">预约 AI 落地诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn ghost" href="#services">看我们做什么</a>
       </div>
       <div class="proof rv d4">
         <div><b><em>SEO</em> 39→80</b><span>外贸官网改版前后</span></div>
         <div><b><em>GEO</em> 38→73</b><span>AI 搜索可引用度</span></div>
-        <div><b>2 天 1 夜</b><span>训练营结营带走一个上线网址</span></div>
+        <div><b>1→7</b><span>买家常问 9 题，能直接答的</span></div>
       </div>
     </div>
     <div class="visual" id="visual">
@@ -408,67 +436,65 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <section class="s" id="services">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">What we do · 业务</span>
-      <h2>四项业务，<br>每一项都<span class="grad">交付结果</span>。</h2>
-      <p>不卖工具账号，不做一次性演示。交付的是<strong>你的团队明天就能接着用</strong>的东西。</p>
+      <span class="eyebrow">What we do · 服务</span>
+      <h2>咨询、培训、落地，<br><span class="grad">一条线做到结果</span>。</h2>
+      <p>先找准<strong>哪里值得用 AI</strong>，再让<strong>团队会用</strong>，最后把<strong>系统搭起来、跑起来</strong>，交到你手里。</p>
     </div>
 
-    <div class="bento">
-      <article class="card big feature rv">
-        <span class="no">01 · TRAINING</span>
-        <h3>AI 实战训练营</h3>
-        <div class="for">给老板和业务骨干 · 两天一夜 · 线下</div>
-        <p>每个人围绕<strong>自己的一个真实业务</strong>，做完四个作业。不是听课，是现场把东西做出来。</p>
-        <div class="days">
-          <div><small>作业 00</small><b>业务卡片</b><span>第一个 Skill</span></div>
-          <div><small>作业 01</small><b>知识库</b><span>每天 08:30 邮件日报</span></div>
-          <div><small>作业 02</small><b>PPT + 海报</b><span>5 页讲稿 · 品牌规范</span></div>
-          <div><small>作业 03</small><b>口播视频</b><span>60 秒 · 可直接发布</span></div>
-          <div><small>作业 04</small><b>上线网站</b><span>手机能打开的网址</span></div>
-        </div>
-        <div class="res"><b>RESULT</b>结营时<strong>手机打开一个网址，整个业务都在里面</strong>，回去就能用来获客。</div>
+    <div class="svc">
+      <article class="card rv">
+        <span class="no">01 · CONSULTING</span>
+        <h3>AI 咨询 · 诊断与规划</h3>
+        <div class="for">给老板与管理层</div>
+        <p>先回答三个问题：<strong>哪些环节值得交给 AI</strong>，<strong>用什么工具、数据放哪</strong>，<strong>先做哪一步、投入多少</strong>。</p>
+        <ul class="dl">
+          <li>业务流程盘点，列出 AI 机会清单</li>
+          <li>工具选型与<strong>数据安全边界</strong></li>
+          <li>分阶段落地路线图与投入估算</li>
+        </ul>
+        <div class="res"><b>RESULT</b>一份<strong>能直接拍板的落地方案</strong>，不是一份趋势报告。</div>
       </article>
 
-      <article class="card tall rv d1">
-        <span class="no">02 · SUPPORT & OUTREACH</span>
-        <h3>智能客服<br>与主动获客</h3>
-        <div class="for">有咨询量、要找达人和经销商的团队</div>
-        <p>客户来问，<strong>按你的知识库回答并带出处</strong>；没人来问，它<strong>主动给达人和 B 端客户发开发信、跟进、起草回复</strong>。</p>
-        <div class="mock" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span>界面示意</span></div>
-          <div class="chat" id="chat">
-            <div class="msg u">会议桌能按我们的尺寸定制吗？</div>
-            <div class="msg a">可以，长度按需定制，下单前会发图纸确认。<span class="src">出处：产品手册_2026.pdf · 第 6 页</span></div>
-            <div class="msg u">佣金能给多少？</div>
-            <div class="msg h">涉及佣金 · 已转人工确认</div>
+      <article class="card rv d1">
+        <span class="no">02 · TRAINING</span>
+        <h3>企业培训 · 按岗位定制</h3>
+        <div class="for">管理层 · 销售 · 客服 · 市场 · 运营</div>
+        <p>用<strong>你公司自己的资料</strong>现场做，不讲通用案例；练的是明天上班就要用的那件事。</p>
+        <ul class="dl">
+          <li>管理层 AI 认知工作坊</li>
+          <li>岗位实战内训，<strong>每人跑通一个工作流</strong></li>
+          <li>团队共用的知识库与 Skill 库</li>
+          <li>训后答疑与复盘</li>
+        </ul>
+        <div class="res"><b>RESULT</b>培训结束时，<strong>每个人手里都有一个已经在用的工作流</strong>。</div>
+      </article>
+
+      <article class="card feature wide2 rv">
+        <div class="tr">
+          <div>
+            <span class="no">03 · TRANSFORMATION</span>
+            <h3>数字化转型 · 落地实施</h3>
+            <div class="for">把方案变成每天在跑的系统</div>
+            <p>我们来搭、来接、来调，<strong>跑稳了再交接给你的团队</strong>。每个系统都有护栏：<strong>关键决定留给人</strong>，每个动作留记录。</p>
+            <div class="mods">
+              <a href="#growth"><b>知识库与智能客服</b><span>答案带出处，查不到转人工</span></a>
+              <a href="#growth"><b>AI 获客系统</b><span>达人与 B 端主动建联、自动跟进</span></a>
+              <a href="#case"><b>官网与 GEO/SEO</b><span>搜得到你，AI 也答得出你</span></a>
+              <a href="#case"><b>AI 内容生产</b><span>宣传片、数字人口播、海报</span></a>
+              <a href="#growth"><b>流程自动化</b><span>邮件日报、资料归档、批量发信</span></a>
+              <a href="#method"><b>交接与迭代</b><span>写清交接，每周补一次</span></a>
+            </div>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="bar"><i></i><i></i><i></i><span>界面示意</span></div>
+            <div class="chat" id="chat">
+              <div class="msg u">会议桌能按我们的尺寸定制吗？</div>
+              <div class="msg a">可以，长度按需定制，下单前会发图纸确认。<span class="src">出处：产品手册_2026.pdf · 第 6 页</span></div>
+              <div class="msg u">佣金能给多少？</div>
+              <div class="msg h">涉及佣金 · 已转人工确认</div>
+            </div>
           </div>
         </div>
-        <div class="guard"><span>谈钱谈合同转人工</span><span>每日限量</span><span>退订即停</span><span>一键暂停</span></div>
-      </article>
-
-      <article class="card big rv">
-        <span class="no">03 · WEBSITE · SEO / GEO</span>
-        <h3>官网改版与 GEO/SEO</h3>
-        <div class="for">外贸工厂、品牌方、门店</div>
-        <p>客户在搜索引擎里搜得到你，<strong>问 AI 时 AI 也答得出你</strong>。从官网重做到平台信源，一份事实底稿铺到所有地方。</p>
-        <div class="flow"><span>事实底稿</span><i>→</i><span>多语言官网</span><i>→</i><span>结构化数据 · llms.txt</span><i>→</i><span>旧网址 301</span><i>→</i><span>1688 · 社媒 · 百科</span><i>→</i><span>每周 AI 复测</span></div>
-        <div class="res"><b>RESULT</b>样例工厂官网 <strong>SEO 39 → 80，GEO 38 → 73</strong>，已上线。</div>
-      </article>
-
-      <article class="card half rv d1">
-        <span class="no">04 · CONTENT</span>
-        <h3>AI 宣传片与内容</h3>
-        <div class="for">品牌片 · 数字人口播 · 海报 · PPT</div>
-        <p>画面和配乐<strong>全部用代码生成</strong>的品牌片；60 秒数字人口播；海报和路演 PPT。<strong>事实只来自你的资料</strong>，不编数字。</p>
-        <div class="res"><b>RESULT</b>一条素材两处用：<strong>嵌进官网，也能单独发布</strong>。</div>
-      </article>
-
-      <article class="card half rv d2">
-        <span class="no">05 · AUTOMATION</span>
-        <h3>日常流程自动化</h3>
-        <div class="for">邮件、日报、批量开发信、资料整理</div>
-        <p>每天 08:30 自动分类邮件、起草回复，资料自动归档、出日报。<strong>只起草、人确认、留记录</strong>。</p>
-        <div class="res"><b>RESULT</b>重复动作交出去，<strong>老板只做判断</strong>。</div>
       </article>
     </div>
   </div>
@@ -586,12 +612,35 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   </div>
 </section>
 
+<!-- OPEN CLASS -->
+<section class="open-wrap">
+  <div class="wrap">
+    <div class="open rv">
+      <div>
+        <span class="eyebrow">Open Class · 公开课</span>
+        <h3>想先体验？来一次 <span class="grad">AI 实战训练营</span></h3>
+        <p>两天一夜，围绕<strong>你自己的一个真实业务</strong>做完四个作业，结营时手机打开一个上线的业务网址。适合想先体验、再决定做企业内训或落地的老板。</p>
+      </div>
+      <div class="open-side">
+        <div class="days">
+          <div><small>00</small><b>业务卡片</b></div>
+          <div><small>01</small><b>知识库</b></div>
+          <div><small>02</small><b>PPT · 海报</b></div>
+          <div><small>03</small><b>口播视频</b></div>
+          <div><small>04</small><b>上线网站</b></div>
+        </div>
+        <a class="btn ghost" href="#contact">咨询下一期<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
     <img class="big rv" src="assets/mimi-mark.svg" alt="">
     <h2 class="rv d1">先聊一件<br><span class="grad">你最耗时的工作</span>。</h2>
-    <p class="rv d2">30 分钟业务诊断：告诉我们你的行业和最头疼的一个环节，我们给你一个<strong>能落地的 AI 方案</strong>和<strong>第一步该做什么</strong>。</p>
+    <p class="rv d2">30 分钟 AI 落地诊断：告诉我们你的行业和最头疼的一个环节，我们给你<strong>值不值得做</strong>、<strong>怎么做</strong>和<strong>第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
     <div class="ways">
       <div class="rv"><small>微信</small><b data-todo>待填写</b></div>
       <div class="rv d1"><small>邮箱</small><b data-todo>待填写</b></div>
