@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","telephone":"+86-186-5536-9985","knowsAbout":["AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
+{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","telephone":"+86-186-5536-9985","knowsAbout":["B 端客户数据库","达人网红数据库","AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
 </script>
 <style>
 :root{
@@ -255,6 +255,24 @@ section.s{position:relative;padding:140px 0}
 .foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
 
 /* growth */
+.data{background:radial-gradient(900px 520px at 8% 30%,rgba(42,92,255,.11),transparent 60%)}
+.agg{display:grid;grid-template-columns:.92fr 128px 1.5fr;gap:26px;align-items:center}
+.src{display:grid;gap:14px}
+.src>div{padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02)}
+.src small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.src p{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.src span{font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:rgba(255,255,255,.02)}
+.hub{position:relative;display:grid;place-items:center;text-align:center;aspect-ratio:1;border-radius:50%;border:1px solid rgba(142,171,255,.45);background:radial-gradient(closest-side,rgba(77,123,255,.3),rgba(11,17,36,.92));box-shadow:0 0 70px rgba(77,123,255,.35)}
+.hub b{display:block;font-size:22px;font-weight:800}
+.hub span{display:block;margin-top:6px;font-size:12.5px;line-height:1.55;color:var(--ink2)}
+.hub::before,.hub::after{content:"";position:absolute;top:50%;width:28px;height:2px}
+.hub::before{right:100%;background:linear-gradient(90deg,transparent,rgba(77,123,255,.8))}
+.hub::after{left:100%;background:linear-gradient(90deg,rgba(77,123,255,.8),transparent)}
+.dbs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dbs .card{padding:30px 28px}
+.dbs h3{font-size:24px}
+.dnote{margin-top:28px;font-size:14px;color:var(--muted)}
+.pipe span a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.4)}
 .growth{background:radial-gradient(900px 500px at 85% 10%,rgba(42,92,255,.12),transparent 60%)}
 .pipe{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .pipe::before{content:"";position:absolute;left:4%;right:4%;top:31px;height:2px;background:linear-gradient(90deg,transparent,rgba(77,123,255,.5) 10%,rgba(77,123,255,.5) 90%,transparent)}
@@ -319,6 +337,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 
 /* responsive */
 @media (max-width:1080px){
+  .agg{grid-template-columns:1fr}
+  .hub{width:150px;margin:0 auto}
+  .hub::before,.hub::after{display:none}
   .hero .wrap{grid-template-columns:1fr}
   .stage3d{margin-top:24px}
   .console{transform:none!important}
@@ -340,6 +361,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .bar5{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:760px){
+  .dbs{grid-template-columns:1fr}
   .links{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 24px;background:rgba(5,7,12,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
   .links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line2)}
   .links .btn{margin-top:16px;justify-content:center}
@@ -403,6 +425,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <a href="#services">服务</a>
       <a href="#case">案例</a>
       <a href="#growth">获客流水线</a>
+      <a href="#data">数据库</a>
       <a href="#method">方法</a>
       <a class="btn primary sm" href="#contact">预约咨询</a>
     </nav>
@@ -632,7 +655,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     </div>
 
     <div class="pipe rv">
-      <div><small>01</small><b>获客</b><span>客户画像 · 名单导入<br>AI 按画像打分</span></div>
+      <div><small>01</small><b>获客</b><span>客户画像 · <a href="#data">自有数据库</a><br>AI 按画像打分</span></div>
       <div><small>02</small><b>建联</b><span>个性化开发信<br>每日限量 · 自动跟进</span></div>
       <div><small>03</small><b>承接</b><span>知识库客服 7×24<br>复杂问题转人工</span></div>
       <div class="man"><small>04</small><b>成交</b><span>报价 · 合同 · 收款<br>人来拍板</span></div>
@@ -666,6 +689,51 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         </ul>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- DATA -->
+<section class="s data" id="data">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Data Engine · 自有数据库</span>
+      <h2>自己运维的数据库：<br><span class="grad">先知道该找谁</span>。</h2>
+      <p>获客的第一步不是发信，是名单。我们自己维护 <strong>B 端客户库</strong>和<strong>达人网红库</strong>，把多个平台的信息聚合到同一张表，<strong>去重、打标签、定期更新</strong>，再按你的客户画像筛出名单，直接交给建联。</p>
+    </div>
+
+    <div class="agg">
+      <div class="src rv">
+        <div><small>社媒平台</small><p><span>TikTok</span><span>YouTube</span><span>Instagram</span><span>Facebook / X</span><span>抖音</span><span>小红书</span><span>快手</span><span>B 站</span><span>视频号</span></p></div>
+        <div><small>商业渠道</small><p><span>海关进出口数据</span><span>展会名录</span><span>LinkedIn</span><span>Google 地图 / 企业官网</span><span>阿里国际站 / 1688</span><span>行业协会名录</span></p></div>
+        <div><small>数据平台</small><p><span>FastMoss</span><span>Kalodata</span><span>其他第三方达人数据</span></p></div>
+      </div>
+      <div class="hub rv d1"><div><b>聚合</b><span>去重 · 打标签<br>定期更新</span></div></div>
+      <div class="dbs">
+        <article class="card rv d1">
+          <span class="no">A · B2B DATABASE</span>
+          <h3>B 端客户库</h3>
+          <p class="for">进口商 · 经销商 · 批发商 · 品牌方</p>
+          <ul class="dl">
+            <li>公司、品类、国家和规模</li>
+            <li>采购与进出口记录</li>
+            <li>关键联系人和公开联系方式</li>
+            <li>每条注明<strong>来源和更新时间</strong></li>
+          </ul>
+        </article>
+        <article class="card rv d2">
+          <span class="no">B · CREATOR DATABASE</span>
+          <h3>达人网红库</h3>
+          <p class="for">海外和国内主流内容平台</p>
+          <ul class="dl">
+            <li>粉丝量、互动率、内容品类</li>
+            <li>受众地区和带货数据</li>
+            <li>同一位达人<strong>跨平台账号合并</strong></li>
+            <li>合作记录和联系方式</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <p class="dnote rv">只收公开信息和合规授权的数据；对方退订，立即停止联系。</p>
   </div>
 </section>
 
