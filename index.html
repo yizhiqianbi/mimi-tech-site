@@ -4,603 +4,820 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>觅咪科技 MIMI TECH｜降本增效，交给数字员工</title>
-<meta name="description" content="觅咪科技帮企业降本增效：把客服、获客、资料、内容这些重复流程交给 AI 数字员工，人只做判断。提供 AI 咨询、企业培训和数字化转型落地。">
-<meta name="theme-color" content="#171C23">
+<meta name="description" content="觅咪科技帮企业降本增效：AI 咨询、企业培训、数字化转型落地，把重复流程交给数字员工——知识库与智能客服、AI 获客系统、官网与 GEO/SEO、AI 内容生产、流程自动化。">
+<meta name="theme-color" content="#05070c">
 <link rel="icon" href="assets/mimi-mark.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="觅咪科技 MIMI TECH｜降本增效，交给数字员工">
-<meta property="og:description" content="把重复流程交给 AI 数字员工，人只做判断。咨询诊断、团队培训、系统落地，一条线做到结果。">
+<meta property="og:description" content="AI 咨询、企业培训、数字化转型落地：先诊断，再培训，最后把系统搭起来、跑起来。">
 <meta property="og:image" content="assets/mimi-mark-1024.png">
-<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业降本增效服务：AI 咨询、企业培训、数字化转型落地，把重复流程交给 AI 数字员工。","knowsAbout":["降本增效","AI 咨询","企业 AI 培训","数字化转型","数字员工","知识库与智能客服","GEO","SEO"]}
+{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","knowsAbout":["AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
 </script>
 <style>
-@font-face{font-family:"Archivo";src:url(assets/fonts/archivo-latin.woff2) format("woff2");font-weight:400 900;font-stretch:62% 125%;font-display:swap;unicode-range:U+0000-00FF,U+00D7,U+2000-206F,U+2190-2193,U+2212}
 :root{
-  --base:#171C23;--panel:#212833;--belt:#10141A;--line:#343E4B;
-  --ink:#E6EBF1;--ink2:#B7C0CC;--muted:#8C97A6;
-  --blue:#4A72FF;--green:#2BD27A;--amber:#FFB020;
-  --paper:#F2F1EC;--paper-ink:#1C2026;--paper-muted:#5E6570;
-  --sans:"Archivo","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",sans-serif;
-  --w:1320px;
+  --bg:#05070c;--bg2:#0a0f1c;--ink:#f3f6fc;--ink2:#c6cedd;--muted:#8a94a9;--dim:#4b556b;
+  --line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.05);
+  --blue:#4d7bff;--blue2:#8eabff;--cobalt:#2a5cff;--glow:rgba(77,123,255,.35);
+  --sans:"Inter","PingFang SC","Noto Sans SC","Noto Sans CJK SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  --w:1240px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{background:var(--base);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
-ul,ol{list-style:none}
+ul{list-style:none}
 strong{color:var(--ink);font-weight:700}
 .wrap{width:min(var(--w),100% - 48px);margin:0 auto}
-.num{font-family:"Archivo",var(--sans);font-stretch:118%;font-variant-numeric:tabular-nums}
-a:focus-visible,button:focus-visible,.compare:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono)}
+.grad{background:linear-gradient(100deg,#fff 0%,#b9cbff 35%,#4d7bff 70%,#9db6ff 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 8s ease-in-out infinite}
+@keyframes sheen{50%{background-position:100% 0}}
 
-/* header */
-.nav{position:sticky;top:0;z-index:20;background:var(--base);border-bottom:1px solid transparent;transition:border-color .2s}
-.nav.scrolled{border-color:var(--line)}
+/* ambient */
+.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spot{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(600px circle at var(--x,50%) var(--y,30%),rgba(77,123,255,.07),transparent 60%)}
+.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(5,7,12,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:32px;height:32px}
-.brand b{font-size:18px;font-weight:800;letter-spacing:.06em}
-.brand span{font-stretch:125%;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
-.links{display:flex;align-items:center;gap:32px;font-size:15px;color:var(--ink2)}
-.links a:not(.btn):hover{color:var(--ink)}
+.brand img{width:34px;height:34px}
+.brand b{display:block;font-size:17px;font-weight:800;letter-spacing:.1em;line-height:1.1}
+.brand small{display:block;font:500 10px/1 var(--mono);letter-spacing:.26em;color:var(--blue2);margin-top:4px}
+.links{display:flex;align-items:center;gap:34px;font-size:15px;color:var(--ink2)}
+.links a:not(.btn){position:relative;transition:color .2s}
+.links a:not(.btn):hover{color:#fff}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .3s}
+.links a:not(.btn):hover::after{transform:scaleX(1)}
 .menu{display:none;background:none;border:0;color:var(--ink);width:40px;height:40px;cursor:pointer}
-.menu span{display:block;width:22px;height:2px;margin:5px auto;background:currentColor;transition:transform .25s,opacity .25s}
+.menu span{display:block;width:22px;height:2px;margin:5px auto;background:currentColor;transition:transform .3s,opacity .3s}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 26px;border-radius:10px;font-size:16px;font-weight:700;white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
-.btn.primary{background:var(--blue);color:#fff}
-.btn.primary:hover{background:#5d81ff}
-.btn.line{border:1.5px solid var(--line);color:var(--ink)}
-.btn.line:hover{border-color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;transition:transform .2s,box-shadow .3s,background .3s,border-color .3s;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,#4d7bff,#2a5cff);color:#fff;box-shadow:0 10px 30px -8px var(--glow),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px rgba(77,123,255,.6),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn.ghost:hover{border-color:rgba(142,171,255,.5);background:rgba(77,123,255,.08)}
 .btn.sm{height:40px;padding:0 18px;font-size:14px}
+.btn svg{width:16px;height:16px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
 
 /* hero */
-.hero{padding:72px 0 96px}
-.hero-top{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:end}
-.hero h1{font-size:clamp(46px,6.3vw,96px);line-height:1.04;font-weight:900;letter-spacing:-.035em}
-.nb{white-space:nowrap}
-.hero-side p{max-width:30em;color:var(--ink2)}
-.hero-side p+p{margin-top:12px}
-.cta{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 700px at 75% 45%,rgba(42,92,255,.22),transparent 65%),radial-gradient(700px 500px at 10% 90%,rgba(77,123,255,.08),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--blue2)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--ink2);margin-bottom:28px}
+.pill i{font-style:normal;font:600 11px/1 var(--mono);letter-spacing:.1em;padding:5px 8px;border-radius:999px;background:rgba(77,123,255,.18);color:var(--blue2)}
+.hero h1 .nw{white-space:nowrap}
+.hero h1{font-size:clamp(40px,5.6vw,80px);line-height:1.08;font-weight:900;letter-spacing:-.02em}
+.hero p.lead{margin-top:28px;font-size:clamp(17px,1.5vw,20px);color:var(--ink2);max-width:560px;line-height:1.75}
+.hero .cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+.proof{margin-top:56px;display:grid;grid-template-columns:repeat(3,auto);gap:36px;justify-content:start}
+.proof div b{white-space:nowrap;display:block;font:700 30px/1 var(--sans);letter-spacing:-.01em}
+.proof div b em{font-style:normal;color:var(--blue2)}
+.proof div span{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
 
-/* production board */
-.board{position:relative;margin-top:64px;border:1px solid var(--line);border-radius:14px;
-  background:
-    radial-gradient(circle at 14px 14px,#3B4553 2.5px,transparent 3.2px),
-    radial-gradient(circle at calc(100% - 14px) 14px,#3B4553 2.5px,transparent 3.2px),
-    radial-gradient(circle at 14px calc(100% - 14px),#3B4553 2.5px,transparent 3.2px),
-    radial-gradient(circle at calc(100% - 14px) calc(100% - 14px),#3B4553 2.5px,transparent 3.2px),
-    var(--panel);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 40px 80px -40px rgba(0,0,0,.7)}
-.board-head{display:flex;align-items:center;gap:16px;padding:16px 36px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2)}
-.board-head b{font-size:15px;color:var(--ink)}
-.demo{font-size:12px;line-height:1;color:var(--muted);padding:5px 8px;border:1px solid var(--line);border-radius:6px}
-.lamp{display:flex;align-items:center;gap:8px}
-.lamp:first-of-type{margin-left:auto}
-.lamp i{width:10px;height:10px;border-radius:50%}
-.lamp.g i{background:var(--green);box-shadow:0 0 10px var(--green)}
-.lamp.a i{background:var(--amber);box-shadow:0 0 10px var(--amber)}
-.lamp em{font-style:normal;font-weight:700;color:var(--ink);min-width:2ch}
-.lane{display:grid;grid-template-columns:190px 1fr 150px;align-items:center;gap:28px;padding:18px 36px;border-bottom:1px solid var(--line)}
-.badge{display:flex;align-items:center;gap:12px}
-.badge img{width:42px;height:42px;padding:8px;border-radius:10px;background:#2A3240;border:1px solid var(--line)}
-.badge b{display:block;font-size:16px;line-height:1.3}
-.badge span{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--muted)}
-.belt{position:relative;height:66px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-.belt::before{content:"";position:absolute;left:0;right:0;top:15px;height:26px;border-radius:6px;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.07) 22px 24px),var(--belt);background-size:24px 100%,auto;animation:roll .8s linear infinite;box-shadow:inset 0 2px 3px rgba(0,0,0,.5)}
-@keyframes roll{to{background-position:24px 0,0 0}}
-.st{position:absolute;top:8px;width:2px;height:40px;margin-left:-1px;background:#4A5566}
-.st em{position:absolute;top:44px;left:50%;transform:translateX(-50%);font-size:12px;line-height:1.2;font-style:normal;white-space:nowrap;color:var(--muted)}
-.tk{position:absolute;top:10px;left:0;transform:translateX(-50%);padding:4px 11px 5px 13px;border-radius:3px;background:var(--paper);color:var(--paper-ink);font-size:12.5px;line-height:1.3;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.5);animation:travel var(--d,8s) linear infinite;opacity:0;z-index:1}
-.tk::before{content:"";position:absolute;left:4px;top:4px;bottom:4px;border-left:2px dotted #C9C7BE}
-.tk small{display:block;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--paper-muted)}
-.tk.alt{animation-delay:calc(var(--d,8s) / -2)}
-@keyframes travel{0%{left:0;opacity:0}5%{opacity:1}16%{left:16%}28%{left:16%}44%{left:50%}56%{left:50%}72%{left:84%}84%{left:84%}95%{opacity:1}100%{left:100%;opacity:0}}
-.slot{justify-self:end;width:150px;height:60px;display:grid;place-items:center;border:1px dashed var(--line);border-radius:10px}
-.stamp{display:inline-block;padding:3px 12px;border:2.5px solid currentColor;border-radius:6px;font-size:17px;font-weight:900;letter-spacing:.14em;white-space:nowrap;color:var(--green);transform:rotate(-7deg);box-shadow:inset 0 0 0 2px var(--panel),inset 0 0 0 3.5px currentColor}
-.stamp.h{color:var(--amber)}
-.stamp.hit{animation:stamp .42s cubic-bezier(.2,1.6,.4,1)}
-@keyframes stamp{0%{transform:rotate(-7deg) scale(1.9);opacity:0}55%{opacity:1}100%{transform:rotate(-7deg) scale(1)}}
-.board-foot{display:flex;align-items:center;gap:12px;padding:18px 36px;font-size:15px;color:var(--ink2)}
-.board-foot i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+/* digital workforce console */
+.stage3d{perspective:1600px}
+.console{position:relative;border-radius:22px;border:1px solid rgba(142,171,255,.22);background:linear-gradient(180deg,rgba(13,20,42,.94),rgba(6,9,20,.94));box-shadow:0 50px 120px -40px rgba(42,92,255,.6),inset 0 1px 0 rgba(255,255,255,.06);transform:rotateY(-9deg) rotateX(5deg);transition:transform .6s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.console::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.06),transparent 35%);pointer-events:none}
+.c-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line2);font-size:13px}
+.c-head .dots{display:flex;gap:6px}
+.c-head .dots i{width:9px;height:9px;border-radius:50%;background:#262d40}
+.c-head b{font-weight:700;letter-spacing:.04em}
+.c-head .live{margin-left:auto;display:flex;align-items:center;gap:8px;font:500 10.5px/1 var(--mono);letter-spacing:.16em;color:#7ee8b4}
+.c-head .live i{width:7px;height:7px;border-radius:50%;background:#3ddc97;box-shadow:0 0 10px #3ddc97;animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+.lane{display:grid;grid-template-columns:112px 1fr 118px;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line2)}
+.who{display:flex;align-items:center;gap:10px}
+.av{position:relative;flex:none;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(77,123,255,.35),rgba(42,92,255,.12));border:1px solid rgba(142,171,255,.35)}
+.av img{width:22px}
+.av::after{content:"";position:absolute;right:-3px;bottom:-3px;width:10px;height:10px;border-radius:50%;background:#3ddc97;border:2px solid #0a0f1f}
+.who b{display:block;font-size:13.5px;line-height:1.2}
+.who span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.belt{position:relative;height:50px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.belt::before{content:"";position:absolute;left:0;right:0;top:17px;height:4px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(142,171,255,.4) 0 8px,transparent 8px 16px);background-size:16px 4px;animation:conv .6s linear infinite;opacity:.7}
+@keyframes conv{to{background-position:16px 0}}
+.st{position:absolute;top:11px;width:16px;height:16px;margin-left:-8px;border-radius:5px;background:#0b1226;border:1.5px solid rgba(142,171,255,.6);box-shadow:0 0 12px rgba(77,123,255,.5)}
+.st::after{content:attr(data-l);position:absolute;top:22px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;font-style:normal;color:var(--muted)}
+.job{position:absolute;top:7px;left:0;transform:translateX(-50%);padding:3px 9px;border-radius:8px;font-size:11px;line-height:1.5;white-space:nowrap;background:#17245a;border:1px solid rgba(142,171,255,.55);color:#e6ecff;box-shadow:0 6px 16px -6px rgba(77,123,255,.9);animation:travel var(--d,8s) linear infinite;opacity:0;z-index:1}
+.job.alt{animation-delay:calc(var(--d,8s) / -2)}
+@keyframes travel{0%{left:0;opacity:0}5%{opacity:1}14%{left:14%}26%{left:14%}44%{left:50%}56%{left:50%}74%{left:86%}86%{left:86%}95%{opacity:1}100%{left:100%;opacity:0}}
+.out{justify-self:end;display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:11.5px;white-space:nowrap;border:1px solid rgba(61,220,151,.35);background:rgba(61,220,151,.08);color:#9ff0c8}
+.out.h{border-color:rgba(255,195,92,.45);background:rgba(255,195,92,.1);color:#ffd58c}
+.out.flash{animation:pop .5s}
+@keyframes pop{30%{transform:scale(1.12)}}
+.c-foot{display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:12.5px;color:var(--ink2)}
+.c-foot i{width:8px;height:8px;border-radius:50%;background:#ffc35c;box-shadow:0 0 10px #ffc35c}
+.c-foot span{margin-left:auto;font:500 10.5px/1 var(--mono);letter-spacing:.14em;color:var(--dim)}
+
+/* roi */
+.roi-rows{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.012)}
+.roi-row{display:grid;grid-template-columns:150px 1fr 64px 1.5fr;align-items:center;gap:24px;padding:24px 32px;border-bottom:1px solid var(--line2);transition:background .3s}
+.roi-row:last-child{border-bottom:0}
+.roi-row:not(.th):hover{background:rgba(77,123,255,.05)}
+.roi-row.th{padding:14px 32px;font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--dim);background:rgba(255,255,255,.02)}
+.roi-row b{font-size:18px}
+.roi-row .was{color:var(--muted);font-size:15px}
+.roi-row .arr{position:relative;height:2px;background:rgba(142,171,255,.18);overflow:hidden}
+.roi-row .arr::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,#8eabff);animation:flowx 1.8s linear infinite}
+@keyframes flowx{to{left:100%}}
+.roi-row .now{font-size:15.5px;color:var(--ink2)}
+.gain{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gain div{padding:26px 28px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(77,123,255,.10),rgba(255,255,255,.01))}
+.gain small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.gain b{display:block;margin-top:12px;font-size:24px;font-weight:800}
+.gain span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+
+/* marquee */
+.marquee{position:relative;border-block:1px solid var(--line2);padding:26px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:mq 50s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee .it{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:15px;font-weight:600;filter:grayscale(1) brightness(1.6);opacity:.7;transition:filter .3s,opacity .3s}
+.marquee .it:hover{filter:none;opacity:1}
+.marquee img{width:26px;height:26px;object-fit:contain;border-radius:6px}
+@keyframes mq{to{transform:translateX(-50%)}}
 
 /* sections */
-.sec{padding:120px 0;border-top:1px solid var(--line)}
-.sec h2{max-width:20em;font-size:clamp(32px,3.8vw,50px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
-.lede{margin-top:20px;max-width:38em;color:var(--ink2)}
+section.s{position:relative;padding:140px 0}
+.head{max-width:760px;margin-bottom:64px}
+.head h2{margin-top:18px;font-size:clamp(34px,4.2vw,56px);line-height:1.15;font-weight:800;letter-spacing:-.015em}
+.head p{margin-top:20px;font-size:18px;color:var(--ink2)}
 
-/* comparison table */
-.cmp{width:100%;margin-top:56px;border-collapse:collapse;text-align:left}
-.cmp th,.cmp td{padding:22px 32px 22px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.cmp thead th{padding-top:0;font-size:14px;font-weight:500;color:var(--muted)}
-.cmp tbody th{width:18%;font-size:18px;font-weight:700}
-.cmp tbody td:nth-of-type(1){width:30%;color:var(--muted)}
-.cmp tbody td:nth-of-type(2){color:var(--ink2)}
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{position:relative;border:1px solid var(--line);border-radius:24px;padding:36px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));overflow:hidden;isolation:isolate;transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(77,123,255,.16),transparent 60%);opacity:0;transition:opacity .4s}
+.card:hover{border-color:rgba(142,171,255,.32)}
+.card:hover::before{opacity:1}
+.card .no{font:500 12px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.card h3{margin-top:18px;font-size:28px;line-height:1.25;font-weight:800}
+.card .for{margin-top:10px;font-size:14px;color:var(--muted)}
+.card p{margin-top:18px;font-size:16px;color:var(--ink2)}
+.card .dl{margin-top:26px;display:grid;gap:10px}
+.card .dl li{position:relative;padding-left:30px;font-size:15px;color:var(--ink2)}
+.card .dl li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:6px;background:rgba(77,123,255,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238eabff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 8.5 2.6 2.5L12 5.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.card .res{margin-top:28px;padding-top:22px;border-top:1px dashed var(--line);font-size:15px;color:var(--ink2)}
+.card .res b{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2);margin-right:10px}
+.card.big{grid-column:span 4}
+.card.tall{grid-column:span 2;grid-row:span 2}
+.card.half{grid-column:span 3}
+.card.wide{grid-column:span 4}
+.card.feature{background:radial-gradient(600px 400px at 100% 0%,rgba(42,92,255,.25),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.days{margin-top:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.days div{padding:16px 14px;border:1px solid var(--line2);border-radius:14px;background:rgba(255,255,255,.02)}
+.days small{display:block;font:500 10px/1 var(--mono);letter-spacing:.16em;color:var(--dim)}
+.days b{display:block;margin-top:10px;font-size:15px}
+.days span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.5}
+.days div:last-child{border-color:rgba(77,123,255,.45);background:rgba(77,123,255,.10)}
+.guard{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.guard span{font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:rgba(255,255,255,.02)}
 
 /* services */
-.svc{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr)}
-.svc>div{padding:0 36px;border-left:1px solid var(--line)}
-.svc>div:first-child{padding-left:0;border-left:0}
-.when{display:block;font-size:15px;font-weight:700;color:var(--muted)}
-.svc h3{margin-top:10px;font-size:24px;line-height:1.35;font-weight:800}
-.who{margin-top:6px;font-size:14px;color:var(--muted)}
-.svc p:not(.who):not(.res){margin-top:16px;color:var(--ink2)}
-.svc ul{margin-top:16px}
-.svc li{position:relative;padding-left:20px;font-size:15.5px;color:var(--ink2)}
-.svc li::before{content:"";position:absolute;left:2px;top:.75em;width:7px;height:7px;background:var(--line)}
-.res{margin-top:22px;padding-top:16px;border-top:1px dashed var(--line);font-size:15.5px;color:var(--ink2)}
-.sub{margin-top:96px;font-size:22px;font-weight:800}
-.sub+p{margin-top:8px;color:var(--muted);font-size:15px}
-.ids{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.idc{position:relative;padding:34px 24px 22px;border-radius:12px;background:var(--paper);color:var(--paper-ink)}
-.idc::before{content:"";position:absolute;top:12px;left:50%;width:44px;height:8px;border-radius:4px;background:var(--base);transform:translateX(-50%)}
-.idc-top{display:flex;align-items:center;justify-content:space-between}
-.idc-top img{width:34px;height:34px}
-.on{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#14804A}
-.on::before{content:"";width:8px;height:8px;border-radius:50%;background:#1FB866}
-.idc b{display:block;margin-top:16px;font-size:20px;font-weight:800;line-height:1.3}
-.idc .no{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--paper-muted)}
-.idc p{margin-top:12px;font-size:14.5px;line-height:1.7;color:#3F4550}
-.idc dl{display:flex;justify-content:space-between;margin-top:16px;padding-top:12px;border-top:1px solid #D9D7CE;font-size:13.5px}
-.idc dt{color:var(--paper-muted)}
-.idc dd{font-weight:700}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.svc .card{display:flex;flex-direction:column}
+.svc .card .res{margin-top:auto;padding-top:22px}
+.svc .card .dl{margin-bottom:28px}
+.svc .wide2{grid-column:span 2}
+.tr{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center}
+.tr .mock{margin-top:0}
+.mods{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mods a{padding:16px 16px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(5,8,18,.5);transition:border-color .3s,background .3s,transform .3s}
+.mods a:hover{border-color:rgba(142,171,255,.45);background:rgba(77,123,255,.1);transform:translateY(-2px)}
+.mods b{display:block;font-size:15.5px}
+.mods span{display:block;margin-top:4px;font-size:13px;line-height:1.5;color:var(--muted)}
+.open-wrap{padding:0 0 40px}
+.open{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:40px 44px;border-radius:24px;border:1px dashed rgba(142,171,255,.3);background:linear-gradient(120deg,rgba(77,123,255,.08),rgba(255,255,255,.01))}
+.open h3{margin-top:16px;font-size:clamp(24px,2.4vw,32px);font-weight:800;line-height:1.3}
+.open p{margin-top:14px;font-size:15.5px;color:var(--ink2)}
+.open-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.open-side .days{margin-top:0;width:100%}
+.open-side .days b{margin-top:8px;font-size:14px}
+
+/* platform mock */
+.mock{margin-top:28px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.7);overflow:hidden}
+.mock .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line2);font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--dim)}
+.mock .bar i{width:9px;height:9px;border-radius:50%;background:#2a3142}
+.mock .bar span{margin-left:auto}
+.chat{padding:18px;display:flex;flex-direction:column;gap:12px;min-height:288px}
+.msg{max-width:86%;padding:12px 15px;border-radius:16px;font-size:14px;line-height:1.6;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.msg.on{opacity:1;transform:none}
+.msg.u{align-self:flex-end;background:rgba(255,255,255,.07);border-bottom-right-radius:5px}
+.msg.a{align-self:flex-start;background:linear-gradient(135deg,rgba(77,123,255,.22),rgba(42,92,255,.12));border:1px solid rgba(77,123,255,.3);border-bottom-left-radius:5px}
+.msg .src{display:block;margin-top:8px;font:500 11px/1.4 var(--mono);color:var(--blue2)}
+.msg.h{align-self:center;max-width:100%;font-size:12.5px;padding:8px 14px;border-radius:999px;background:rgba(255,195,92,.1);border:1px solid rgba(255,195,92,.35);color:#ffd58c}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:24px}
+.flow span{font-size:13px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--ink2)}
+.flow i{font-style:normal;color:var(--dim)}
 
 /* case */
-.compare{position:relative;margin-top:56px;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/900;user-select:none;touch-action:pan-y;cursor:ew-resize}
+.case{background:radial-gradient(1000px 600px at 20% 0%,rgba(42,92,255,.12),transparent 60%)}
+.case-top{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch}
+.compare{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/900;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 40px 100px -40px rgba(42,92,255,.5)}
 .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .compare .before{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
-.compare .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;margin-left:-1px;background:#fff}
-.compare .handle::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--base) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;border:2px solid #fff}
-.compare .tag{position:absolute;bottom:14px;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:700;background:rgba(23,28,35,.85);color:var(--ink)}
-.compare .tag.l{left:14px}
-.compare .tag.r{right:14px}
-.caps2{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:15px;color:var(--ink2)}
-.caps2 b{margin-right:8px;color:var(--ink)}
-.facts{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts>div{padding:28px 28px 28px 0;min-width:0}
-.facts>div+div{padding-left:28px;border-left:1px solid var(--line)}
-.facts b{display:block;font-size:clamp(36px,3.8vw,54px);line-height:1;font-weight:800;letter-spacing:-.01em}
-.facts b span{color:var(--muted);font-weight:500;margin:0 .08em}
-.facts p{margin-top:12px;font-size:14.5px;color:var(--muted)}
-.film{margin-top:64px;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
-.film video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
-.film h3{font-size:26px;line-height:1.4;font-weight:800}
-.film p{margin-top:14px;color:var(--ink2)}
-.tlink{display:inline-block;margin-top:22px;color:var(--blue);font-weight:700;border-bottom:1.5px solid rgba(74,114,255,.4)}
-.tlink:hover{border-color:var(--blue)}
-.note{margin-top:32px;max-width:52em;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 20px rgba(142,171,255,.9)}
+.compare .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(10,16,40,.8) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/22px no-repeat;border:1.5px solid #fff;backdrop-filter:blur(6px)}
+.compare .tag{position:absolute;top:16px;padding:6px 12px;border-radius:999px;font:600 11px/1 var(--mono);letter-spacing:.14em;background:rgba(5,7,12,.75);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.compare .tag.l{left:16px;color:#ff9a9a}
+.compare .tag.r{right:16px;color:#7ee8b4}
+.case-side{display:flex;flex-direction:column;gap:18px}
+.case-side .card{padding:30px;flex:1}
+.case-side h3{font-size:24px}
+.bad,.good{display:grid;gap:8px;margin-top:16px;font-size:14.5px}
+.bad li,.good li{display:flex;gap:10px;color:var(--ink2)}
+.bad li::before{content:"×";color:#ff7a7a;font-weight:700}
+.good li::before{content:"✓";color:#58e0a0;font-weight:700}
+.metrics{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.metric{padding:28px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.02)}
+.metric small{font:500 11px/1 var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.metric b{display:flex;align-items:baseline;gap:10px;margin-top:14px;font-size:44px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.metric b s{text-decoration:none;font-size:22px;color:var(--dim);font-weight:600}
+.metric b s::after{content:" →";color:var(--blue2)}
+.metric>span{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.metric .cnt{color:#fff}
+.metric.hl{border-color:rgba(77,123,255,.4);background:linear-gradient(160deg,rgba(77,123,255,.16),rgba(255,255,255,.01))}
+.film{margin-top:18px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center}
+.film video{width:100%;border-radius:22px;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+.film h3{font-size:26px;font-weight:800;line-height:1.3}
+.film p{margin-top:14px;color:var(--ink2);font-size:16px}
+.film .kv{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.film .kv span{font:500 12px/1 var(--mono);padding:8px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink2)}
+.foot-note{margin-top:22px;font-size:12.5px;color:var(--dim)}
+.foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
 
 /* growth */
-.steps{margin-top:56px;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;counter-reset:s}
-.steps.four{grid-template-columns:repeat(4,1fr)}
-.steps li{counter-increment:s;padding-top:18px;border-top:2px solid var(--line)}
-.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:"Archivo",var(--sans);font-stretch:125%;font-size:14px;font-weight:700;color:var(--muted)}
-.steps b{display:block;margin-top:10px;font-size:21px;font-weight:800}
-.steps span{display:block;margin-top:6px;font-size:15px;line-height:1.7;color:var(--ink2)}
-.steps li.h{border-top-color:var(--amber)}
-.steps li.h b::after{content:"人";margin-left:10px;padding:1px 8px;border-radius:6px;font-size:12px;font-weight:700;vertical-align:3px;background:rgba(255,176,32,.16);color:var(--amber)}
-.grow{margin-top:80px;display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
-.grow h3{font-size:22px;font-weight:800}
-.grow p{margin-top:12px;color:var(--ink2)}
-.grow figure{margin-top:24px}
-.grow figure img{border-radius:10px;border:1px solid var(--line)}
-.grow figcaption{margin-top:10px;font-size:14px;color:var(--muted)}
-.grow-side>div+div{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
-.grow-side li{position:relative;padding-left:20px;margin-top:8px;font-size:15.5px;color:var(--ink2)}
-.grow-side li::before{content:"";position:absolute;left:2px;top:.75em;width:7px;height:7px;background:var(--amber)}
-.std{margin-top:48px;font-size:18px;color:var(--ink2)}
+.growth{background:radial-gradient(900px 500px at 85% 10%,rgba(42,92,255,.12),transparent 60%)}
+.pipe{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pipe::before{content:"";position:absolute;left:4%;right:4%;top:31px;height:2px;background:linear-gradient(90deg,transparent,rgba(77,123,255,.5) 10%,rgba(77,123,255,.5) 90%,transparent)}
+.pipe::after{content:"";position:absolute;top:27px;left:4%;width:90px;height:10px;border-radius:10px;background:radial-gradient(closest-side,#cfdcff,rgba(77,123,255,.6),transparent);filter:blur(1px);animation:pulse 4.5s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes pulse{from{left:2%;opacity:0}10%{opacity:1}90%{opacity:1}to{left:calc(96% - 90px);opacity:0}}
+.pipe>div{position:relative;padding:0 6px}
+.pipe small{position:relative;z-index:1;display:grid;place-items:center;width:64px;height:64px;border-radius:20px;border:1px solid rgba(142,171,255,.4);background:#0b1124;font:600 15px/1 var(--mono);color:var(--blue2);box-shadow:0 0 0 6px var(--bg),0 10px 30px -10px rgba(77,123,255,.6)}
+.pipe .man small{border-color:rgba(255,195,92,.55);color:#ffd58c}
+.pipe b{display:block;margin-top:22px;font-size:22px;font-weight:800}
+.pipe span{display:block;margin-top:8px;font-size:14px;line-height:1.65;color:var(--muted)}
+.pipe .man b::after{content:"人";margin-left:10px;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:600;vertical-align:3px;background:rgba(255,195,92,.14);color:#ffd58c}
+.caps{margin-top:64px;display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:18px}
+.caps .card{display:flex;flex-direction:column}
+.caps h3{font-size:24px}
+.modes{margin-top:22px;display:grid;gap:10px}
+.modes div{padding:14px 16px;border-radius:14px;border:1px solid var(--line2);background:rgba(255,255,255,.02)}
+.modes b{font-size:15px}
+.modes span{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
+.caps .guard{margin-top:auto;padding-top:22px}
+.shot{margin-top:22px;flex:1;display:flex;flex-direction:column}
+.shot img{flex:1;min-height:200px;width:100%;border-radius:14px;border:1px solid var(--line);object-fit:cover;object-position:left top;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .shot img{transform:scale(1.03)}
+.shot figcaption{margin-top:12px;font-size:13px;color:var(--muted)}
 
-/* open class + contact */
-.open{padding:48px 0;border-top:1px solid var(--line)}
-.open p{max-width:52em;color:var(--ink2)}
-.open p strong{margin-right:6px}
-.open .tlink{margin:0 0 0 10px}
-.contact{padding:140px 0;border-top:1px solid var(--line)}
-.contact h2{font-size:clamp(40px,5.6vw,84px);line-height:1.1;font-weight:900;letter-spacing:-.03em}
-.contact p{margin-top:24px;max-width:36em;color:var(--ink2)}
-.contact .cta{margin-top:36px}
-.ways{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-.ways>div{padding:22px 24px 0 0}
-.ways>div+div{padding-left:24px;border-left:1px solid var(--line)}
-.ways dt{font-size:14px;color:var(--muted)}
-.ways dd{margin-top:6px;font-size:19px;font-weight:700}
-.ways dd[data-todo]{color:var(--muted);font-weight:500}
-footer{padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+/* method */
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.method div{position:relative;padding:36px 30px 40px;border-right:1px solid var(--line);transition:background .3s}
+.method div:last-child{border-right:0}
+.method div:hover{background:rgba(77,123,255,.06)}
+.method small{font:500 12px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.method b{display:block;margin-top:22px;font-size:26px;font-weight:800}
+.method p{margin-top:12px;font-size:15px;color:var(--ink2)}
+.method div::after{content:"";position:absolute;left:30px;right:30px;bottom:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.method div:hover::after{transform:scaleX(1)}
+.bar5{margin-top:22px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.bar5 div{padding:18px 20px;border-radius:16px;border:1px solid var(--line2);background:rgba(255,255,255,.015)}
+.bar5 b{font-size:18px}
+.bar5 span{display:block;margin-top:4px;font-size:13px;color:var(--muted)}
+
+/* contact */
+.contact{position:relative;padding:160px 0;overflow:hidden;text-align:center}
+.contact::before{content:"";position:absolute;left:50%;top:50%;width:1100px;height:700px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(42,92,255,.35),transparent);filter:blur(20px)}
+.contact .wrap{position:relative}
+.contact img.big{width:96px;margin:0 auto 34px;filter:drop-shadow(0 10px 40px rgba(77,123,255,.8))}
+.contact h2{font-size:clamp(38px,5.4vw,72px);line-height:1.12;font-weight:900;letter-spacing:-.02em}
+.contact p{margin:24px auto 0;max-width:620px;font-size:18px;color:var(--ink2)}
+.ways{margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;text-align:left}
+.ways div{padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.6);backdrop-filter:blur(10px)}
+.ways small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--muted)}
+.ways b{display:block;margin-top:10px;font-size:17px;word-break:break-all}
+.ways b[data-todo]{color:var(--dim)}
+
+footer{border-top:1px solid var(--line2);padding:36px 0;font-size:13px;color:var(--dim)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
 
 /* responsive */
 @media (max-width:1080px){
-  .hero-top{grid-template-columns:1fr;gap:28px}
-  .lane{grid-template-columns:170px 1fr 130px;gap:20px;padding:16px 24px}
-  .slot{width:130px}
-  .board-head,.board-foot{padding-left:24px;padding-right:24px}
-  .svc{grid-template-columns:1fr;gap:40px}
-  .svc>div{padding:32px 0 0;border-left:0;border-top:1px solid var(--line)}
-  .svc>div:first-child{padding-top:0;border-top:0}
-  .ids{grid-template-columns:1fr 1fr}
-  .facts{grid-template-columns:1fr 1fr}
-  .facts>div:nth-child(3){padding-left:0;border-left:0}
-  .facts>div:nth-child(n+3){border-top:1px solid var(--line)}
-  .film,.grow{grid-template-columns:1fr;gap:32px}
-  .steps{grid-template-columns:repeat(3,1fr);row-gap:36px}
-  .steps.four{grid-template-columns:1fr 1fr}
+  .hero .wrap{grid-template-columns:1fr}
+  .stage3d{margin-top:24px}
+  .console{transform:none!important}
+  .roi-row{grid-template-columns:120px 1fr 40px 1.3fr;padding:20px 22px}
+  .bento{grid-template-columns:1fr 1fr}
+  .tr{grid-template-columns:1fr}
+  .mods{grid-template-columns:1fr 1fr}
+  .open{grid-template-columns:1fr;padding:32px 28px}
+  .card.big,.card.tall,.card.half,.card.wide{grid-column:span 2;grid-row:auto}
+  .case-top,.film{grid-template-columns:1fr}
+  .pipe{grid-template-columns:repeat(3,1fr);row-gap:40px}
+  .pipe::before,.pipe::after{display:none}
+  .caps{grid-template-columns:1fr 1fr}
+  .caps .card:first-child{grid-column:span 2}
+  .metrics{grid-template-columns:1fr 1fr}
+  .method{grid-template-columns:1fr 1fr}
+  .method div:nth-child(2){border-right:0}
+  .method div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .bar5{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:760px){
-  body{font-size:16px}
-  .links{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;background:var(--base);border-bottom:1px solid var(--line);opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,transform .2s}
-  .links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line)}
-  .links .btn{margin-top:16px}
-  .nav.open .links{opacity:1;pointer-events:auto;transform:none}
+  .links{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 24px;background:rgba(5,7,12,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  .links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line2)}
+  .links .btn{margin-top:16px;justify-content:center}
+  .nav.open .links{opacity:1;transform:none;pointer-events:auto}
+  .nav.open{background:rgba(5,7,12,.96)}
   .nav.open .menu span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav.open .menu span:nth-child(2){opacity:0}
   .nav.open .menu span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   .menu{display:block}
-  .brand span{display:none}
-  .hero{padding:40px 0 72px}
-  .board{margin-top:44px}
-  .board-head{flex-wrap:wrap;gap:10px 14px;padding:14px 18px}
-  .lamp:first-of-type{margin-left:0}
-  .demo{margin-left:auto}
-  .lane{grid-template-columns:1fr auto;gap:10px;padding:16px 18px}
-  .belt{grid-column:1/-1;grid-row:2}
-  .slot{width:112px;height:48px}
-  .stamp{font-size:14px;padding:2px 9px}
-  .st em{font-size:11px}
-  .board-foot{padding:16px 18px;font-size:14px;align-items:flex-start}
-  .board-foot i{margin-top:7px}
-  .sec{padding:84px 0}
-  .sec h2{font-size:28px}
-  .cmp thead{display:none}
-  .cmp tr{display:block;padding:18px 0;border-bottom:1px solid var(--line)}
-  .cmp th,.cmp td{display:block;width:auto!important;padding:2px 0;border:0}
-  .cmp tbody th{margin-bottom:6px}
-  .cmp td::before{content:attr(data-l);margin-right:10px;color:var(--muted);font-size:14px}
-  .ids{grid-template-columns:1fr}
-  .caps2{grid-template-columns:1fr;gap:8px}
-  .facts>div{padding:22px 14px 22px 0}
-  .facts>div:nth-child(even){padding-left:16px}
-  .facts b{font-size:32px}
-  .facts p{font-size:13.5px}
-  .steps,.steps.four{grid-template-columns:1fr;row-gap:28px}
+  section.s{padding:96px 0}
+  .proof{grid-template-columns:1fr 1fr;gap:26px}
+  .card{padding:26px}
+  .card h3{font-size:24px}
+  .days{grid-template-columns:1fr 1fr}
+  .metrics{grid-template-columns:1fr}
+  .metric b{font-size:38px}
+  .method{grid-template-columns:1fr}
+  .method div{border-right:0;border-bottom:1px solid var(--line)}
+  .method div:last-child{border-bottom:0}
+  .bar5{grid-template-columns:1fr 1fr}
   .ways{grid-template-columns:1fr}
-  .ways>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:22px}
-  .contact{padding:96px 0}
+  .svc{grid-template-columns:1fr}
+  .svc .wide2{grid-column:auto}
+  .mods{grid-template-columns:1fr}
+  .open-side .days{grid-template-columns:repeat(3,1fr)}
+  .pipe{grid-template-columns:1fr 1fr}
+  .caps{grid-template-columns:1fr}
+  .caps .card:first-child{grid-column:auto}
+  .lane{grid-template-columns:40px 1fr;row-gap:6px;padding:14px}
+  .who>div:not(.av){display:none}
+  .c-foot span{display:none}
+  .c-foot strong{white-space:nowrap}
+  .pill i{display:none}
+  .pill{padding-left:14px}
+  .out{grid-column:2;justify-self:start}
+  .st::after{font-size:9.5px}
+  .roi-row{grid-template-columns:1fr;gap:8px;padding:20px}
+  .roi-row.th,.roi-row .arr{display:none}
+  .roi-row .was::before{content:"以前　";color:var(--dim)}
+  .roi-row .now::before{content:"现在　";color:var(--blue2);font-weight:600}
+  .gain{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .job{opacity:1;left:50%}
+  .job.alt{display:none}
   html{scroll-behavior:auto}
-  .tk{opacity:1;left:50%}
-  .tk.alt{display:none}
 }
 </style>
 </head>
 <body>
+<div class="noise"></div>
+<div class="spot" id="spot"></div>
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="觅咪科技 首页"><img src="assets/mimi-mark.svg" alt=""><b>觅咪科技</b><span>MIMI TECH</span></a>
+    <a class="brand" href="#top" aria-label="觅咪科技 首页"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
     <nav class="links" id="links">
       <a href="#roi">降本增效</a>
       <a href="#services">服务</a>
       <a href="#case">案例</a>
-      <a href="#growth">获客</a>
+      <a href="#growth">获客流水线</a>
       <a href="#method">方法</a>
-      <a class="btn primary sm" href="#contact">预约诊断</a>
+      <a class="btn primary sm" href="#contact">预约咨询</a>
     </nav>
-    <button class="menu" id="menu" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="menu" id="menu" aria-label="菜单"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
-
+<!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-top">
-    <h1>降本增效，<br>交给<span class="nb">数字员工。</span></h1>
-    <div class="hero-side">
-      <p>觅咪科技帮企业把重复的流程交给 AI 数字员工：客服、获客、资料、内容，各有专人在岗。<strong>人只在需要判断的时候出手。</strong></p>
-      <p>咨询诊断、团队培训、系统落地，我们一条线做到结果。</p>
-      <div class="cta">
-        <a class="btn primary" href="#contact">预约降本增效诊断</a>
-        <a class="btn line" href="#case">看真实案例</a>
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="pill rv"><i>MIMI TECH</i>降本增效 · AI 咨询 · 企业培训 · 数字化转型</div>
+      <h1 class="rv d1">降本增效，<br>交给<span class="grad nw">数字员工</span>。</h1>
+      <p class="lead rv d2">觅咪科技帮企业<strong>降本增效</strong>：把重复的流程交给 AI <strong>数字员工</strong>，人只做判断。从<strong>咨询诊断</strong>、<strong>团队培训</strong>到<strong>系统落地</strong>，一条线做到结果。</p>
+      <div class="cta rv d3">
+        <a class="btn primary" href="#contact">预约降本增效诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn ghost" href="#roi">看数字员工怎么干活</a>
+      </div>
+      <div class="proof rv d4">
+        <div><b>7×24</b><span>客户咨询按知识库回复</span></div>
+        <div><b>08:30</b><span>邮件日报自动送达</span></div>
+        <div><b><em>SEO</em> 39→80</b><span>官网改版前后</span></div>
       </div>
     </div>
-  </div>
-
-  <div class="wrap">
-    <div class="board" aria-label="数字员工产线演示">
-      <div class="board-head">
-        <b>1 号产线</b><span class="demo">演示画面</span>
-        <span class="lamp g"><i></i>已完成 <em class="num" id="cDone">0</em></span>
-        <span class="lamp a"><i></i>等你处理 <em class="num" id="cWait">0</em></span>
-      </div>
-
-      <div class="lane" style="--d:7s">
-        <div class="badge"><img src="assets/mimi-mark.svg" alt=""><div><b>客服专员</b><span class="num">DW-01</span></div></div>
-        <div class="belt">
-          <i class="st" style="left:16%"><em>接收</em></i><i class="st" style="left:50%"><em>查知识库</em></i><i class="st" style="left:84%"><em>回复</em></i>
-          <span class="tk" data-out="已回复" data-no="412"><small class="num">#0412</small>询价：能定制吗</span>
-          <span class="tk alt" data-out="转人工" data-h data-no="413"><small class="num">#0413</small>佣金能给多少</span>
+    <div class="stage3d rv d2" id="stage3d">
+      <div class="console" id="console" aria-label="数字员工流水线示意">
+        <div class="c-head"><span class="dots"><i></i><i></i><i></i></span><b>数字员工 · 流水线</b><span class="live"><i></i>RUNNING · 示意</span></div>
+        <div class="lane" style="--d:7s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>客服专员</b><span>知识库客服</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="接收"></i><i class="st" style="left:50%" data-l="查知识库"></i><i class="st" style="left:86%" data-l="回复"></i><span class="job" data-out="已回复 · 带出处">询价：能定制吗</span><span class="job alt" data-out="转人工" data-h>佣金能给多少</span></div>
+          <span class="out">已回复 · 带出处</span>
         </div>
-        <div class="slot"><span class="stamp">已回复</span></div>
-      </div>
-
-      <div class="lane" style="--d:8.4s">
-        <div class="badge"><img src="assets/mimi-mark.svg" alt=""><div><b>获客专员</b><span class="num">DW-02</span></div></div>
-        <div class="belt">
-          <i class="st" style="left:16%"><em>导入名单</em></i><i class="st" style="left:50%"><em>打分、定制</em></i><i class="st" style="left:84%"><em>投放、跟进</em></i>
-          <span class="tk" data-out="已建联" data-no="208"><small class="num">#0208</small>TikTok 达人</span>
-          <span class="tk alt" data-out="已投放" data-no="209"><small class="num">#0209</small>德国经销商</span>
+        <div class="lane" style="--d:8.4s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>获客专员</b><span>主动建联</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="导入名单"></i><i class="st" style="left:50%" data-l="打分 · 起草"></i><i class="st" style="left:86%" data-l="发信 · 跟进"></i><span class="job" data-out="已建联">TikTok 达人</span><span class="job alt" data-out="已发送 · 待回复">经销商名单</span></div>
+          <span class="out">已建联</span>
         </div>
-        <div class="slot"><span class="stamp">已建联</span></div>
-      </div>
-
-      <div class="lane" style="--d:9.2s">
-        <div class="badge"><img src="assets/mimi-mark.svg" alt=""><div><b>资料专员</b><span class="num">DW-03</span></div></div>
-        <div class="belt">
-          <i class="st" style="left:16%"><em>收件</em></i><i class="st" style="left:50%"><em>分类、摘要</em></i><i class="st" style="left:84%"><em>推送</em></i>
-          <span class="tk" data-out="日报已推" data-no="830"><small class="num">#0830</small>今天的邮件</span>
-          <span class="tk alt" data-out="已归档" data-no="831"><small class="num">#0831</small>会议录音</span>
+        <div class="lane" style="--d:9.2s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>资料专员</b><span>邮件 · 日报</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="收件"></i><i class="st" style="left:50%" data-l="分类 · 摘要"></i><i class="st" style="left:86%" data-l="推送"></i><span class="job" data-out="08:30 日报已推送">今日邮件</span><span class="job alt" data-out="纪要已归档">会议录音</span></div>
+          <span class="out">08:30 日报已推送</span>
         </div>
-        <div class="slot"><span class="stamp">日报已推</span></div>
-      </div>
-
-      <div class="lane" style="--d:7.8s">
-        <div class="badge"><img src="assets/mimi-mark.svg" alt=""><div><b>内容专员</b><span class="num">DW-04</span></div></div>
-        <div class="belt">
-          <i class="st" style="left:16%"><em>产品资料</em></i><i class="st" style="left:50%"><em>脚本、分镜</em></i><i class="st" style="left:84%"><em>成片</em></i>
-          <span class="tk" data-out="待审核" data-h data-no="105"><small class="num">#0105</small>宣传片</span>
-          <span class="tk alt" data-out="待审核" data-h data-no="106"><small class="num">#0106</small>活动海报</span>
+        <div class="lane" style="--d:7.8s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>内容专员</b><span>视频 · 海报</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="资料"></i><i class="st" style="left:50%" data-l="脚本 · 分镜"></i><i class="st" style="left:86%" data-l="成片"></i><span class="job" data-out="宣传片待审核" data-h>产品资料</span><span class="job alt" data-out="海报待审核" data-h>活动主题</span></div>
+          <span class="out h">宣传片待审核</span>
         </div>
-        <div class="slot"><span class="stamp h">待审核</span></div>
+        <div class="c-foot"><i></i>人只做判断：<strong>转人工 · 审核 · 拍板</strong><span>每个动作留记录</span></div>
       </div>
-
-      <div class="board-foot"><i></i><span>班组长是你：琥珀灯亮时出手，<strong>转人工、审核、拍板</strong>。其余时间数字员工按流程跑，每一步留记录。</span></div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="roi">
+<!-- TOOLS -->
+<div class="marquee" aria-label="我们熟悉的 AI 工具">
+  <div class="track" id="track">
+    <div class="it"><img src="assets/logos/openai.svg" alt="">ChatGPT</div>
+    <div class="it"><img src="assets/logos/codex.svg" alt="">Codex</div>
+    <div class="it"><img src="assets/logos/claudecode.svg" alt="">Claude Code</div>
+    <div class="it"><img src="assets/logos/deepseek.svg" alt="">DeepSeek</div>
+    <div class="it"><img src="assets/logos/doubao.svg" alt="">豆包</div>
+    <div class="it"><img src="assets/logos/kimi.svg" alt="">Kimi</div>
+    <div class="it"><img src="assets/logos/qianwen.svg" alt="">通义千问</div>
+    <div class="it"><img src="assets/logos/yuanbao.svg" alt="">元宝</div>
+    <div class="it"><img src="assets/logos/gemini.svg" alt="">Gemini</div>
+    <div class="it"><img src="assets/logos/workbuddy.svg" alt="">WorkBuddy</div>
+    <div class="it"><img src="assets/logos/grokbot.svg" alt="">Grokbot</div>
+    <div class="it"><img src="assets/logos/feishu.png" alt="">飞书</div>
+    <div class="it"><img src="assets/logos/wecom.png" alt="">企业微信</div>
+    <div class="it"><img src="assets/logos/dingtalk.png" alt="">钉钉</div>
+    <div class="it"><img src="assets/logos/dify.svg" alt="">Dify</div>
+    <div class="it"><img src="assets/logos/coze.svg" alt="">扣子</div>
+    <div class="it"><img src="assets/logos/heygen.png" alt="">HeyGen</div>
+    <div class="it"><img src="assets/logos/kling.svg" alt="">可灵</div>
+    <div class="it"><img src="assets/logos/jimeng.svg" alt="">即梦</div>
+    <div class="it"><img src="assets/logos/hailuo.svg" alt="">海螺</div>
+    <div class="it"><img src="assets/logos/minimax.svg" alt="">MiniMax</div>
+    <div class="it"><img src="assets/logos/midjourney.svg" alt="">Midjourney</div>
+    <div class="it"><img src="assets/logos/suno.svg" alt="">Suno</div>
+  </div>
+</div>
+
+<!-- ROI -->
+<section class="s" id="roi">
   <div class="wrap">
-    <h2>重复的活交给<span class="nb">数字员工，</span><span class="nb">人只做判断。</span></h2>
-    <p class="lede">先挑出最耗人的几个流程，算清三笔账：<strong>省多少时间、少出多少错、多接多少单</strong>，再动手。下面这些，我们都做过。</p>
-    <table class="cmp">
-      <thead><tr><th>流程</th><th>以前</th><th>交给数字员工后</th></tr></thead>
-      <tbody>
-        <tr><th>邮件处理</th><td data-l="以前">每天逐封看、手动回</td><td data-l="现在">每天 08:30 一份日报：分类、摘要、起草回复，<strong>人只点确认</strong></td></tr>
-        <tr><th>客户咨询</th><td data-l="以前">等人有空才回，口径不一</td><td data-l="现在"><strong>7×24 按知识库回答</strong>，答案带出处；谈钱谈合同转人工</td></tr>
-        <tr><th>潜在客户开发</th><td data-l="以前">群发模板，一封封改称呼</td><td data-l="现在"><strong>按市场和语言定制投放</strong>，每封写对称呼、产品和卖点</td></tr>
-        <tr><th>官网问答</th><td data-l="以前">买家常问 9 题，只答得上 1 题</td><td data-l="现在">改版后<strong>能直接答 7 题</strong>，AI 搜索也能引用</td></tr>
-        <tr><th>品牌宣传片</th><td data-l="以前">外包拍摄、反复改稿</td><td data-l="现在"><strong>44.5 秒品牌片用代码生成</strong>，不用拍、不用录</td></tr>
-      </tbody>
-    </table>
+    <div class="head rv">
+      <span class="eyebrow">Cost &amp; Efficiency · 降本增效</span>
+      <h2>重复的活交给数字员工，<br><span class="grad">人只做判断</span>。</h2>
+      <p>先挑出最耗人的几个流程，算清三笔账：<strong>省多少时间</strong>、<strong>少出多少错</strong>、<strong>多接多少单</strong>，再动手。</p>
+    </div>
+    <div class="roi-rows rv">
+      <div class="roi-row th"><span>流程</span><span>以前</span><span></span><span>交给数字员工后</span></div>
+      <div class="roi-row"><b>邮件处理</b><span class="was">每天逐封看、手动回</span><i class="arr"></i><span class="now"><strong>每天 08:30 一份日报</strong>：分类、摘要、起草回复，人只点确认</span></div>
+      <div class="roi-row"><b>客户咨询</b><span class="was">等人有空才回，口径不一</span><i class="arr"></i><span class="now"><strong>7×24 按知识库回答</strong>，答案带出处；谈钱谈合同转人工</span></div>
+      <div class="roi-row"><b>潜在客户开发</b><span class="was">群发模板，一封封复制、改称呼</span><i class="arr"></i><span class="now"><strong>按市场和语言定制投放</strong>，每封写对称呼、产品和卖点</span></div>
+      <div class="roi-row"><b>官网问答</b><span class="was">买家常问 9 题，只答得上 1 题</span><i class="arr"></i><span class="now">改版后<strong>能直接答 7 题</strong>，AI 搜索也能引用</span></div>
+      <div class="roi-row"><b>品牌宣传片</b><span class="was">外包拍摄、反复改稿</span><i class="arr"></i><span class="now"><strong>44.5 秒品牌片代码生成</strong>，画面和配乐不用拍、不用录</span></div>
+    </div>
+    <div class="gain">
+      <div class="rv"><small>01 · 省时间</small><b>重复动作交出去</b><span>整理、回复、发信、出日报</span></div>
+      <div class="rv d1"><small>02 · 少出错</small><b>每个答案有出处</b><span>数字对得上原文，缺的写「待确认」</span></div>
+      <div class="rv d2"><small>03 · 多接单</small><b>没人值班也有人回</b><span>线索不漏，跟进不断</span></div>
+    </div>
   </div>
 </section>
 
-<section class="sec" id="services">
+<!-- SERVICES -->
+<section class="s" id="services">
   <div class="wrap">
-    <h2>咨询、培训、落地，<span class="nb">一条线做到降本增效。</span></h2>
+    <div class="head rv">
+      <span class="eyebrow">What we do · 服务</span>
+      <h2>咨询、培训、落地，<br>一条线做到<span class="grad">降本增效</span>。</h2>
+      <p>先找准<strong>哪里值得用 AI</strong>，再让<strong>团队会用</strong>，最后把<strong>系统搭起来、跑起来</strong>，交到你手里。</p>
+    </div>
+
     <div class="svc">
-      <div>
-        <span class="when">先</span>
-        <h3>AI 咨询：诊断与规划</h3>
-        <p class="who">给老板与管理层</p>
-        <p>回答三个问题：<strong>哪些环节值得交给 AI</strong>，用什么工具、数据放哪，先做哪一步、投入多少。</p>
-        <ul>
+      <article class="card rv">
+        <span class="no">01 · CONSULTING</span>
+        <h3>AI 咨询 · 诊断与规划</h3>
+        <div class="for">给老板与管理层</div>
+        <p>先回答三个问题：<strong>哪些环节值得交给 AI</strong>，<strong>用什么工具、数据放哪</strong>，<strong>先做哪一步、投入多少</strong>。</p>
+        <ul class="dl">
           <li>业务流程盘点，列出 AI 机会清单</li>
-          <li>工具选型与数据安全边界</li>
+          <li>工具选型与<strong>数据安全边界</strong></li>
           <li>分阶段落地路线图与投入估算</li>
         </ul>
-        <p class="res">交付：一份<strong>能直接拍板的落地方案</strong>。</p>
-      </div>
-      <div>
-        <span class="when">再</span>
-        <h3>企业培训：按岗位定制</h3>
-        <p class="who">管理层、销售、客服、市场、运营</p>
-        <p>用<strong>你公司自己的资料</strong>现场做，练的是明天上班就要用的那件事。</p>
-        <ul>
+        <div class="res"><b>RESULT</b>一份<strong>能直接拍板的落地方案</strong>，不是一份趋势报告。</div>
+      </article>
+
+      <article class="card rv d1">
+        <span class="no">02 · TRAINING</span>
+        <h3>企业培训 · 按岗位定制</h3>
+        <div class="for">管理层 · 销售 · 客服 · 市场 · 运营</div>
+        <p>用<strong>你公司自己的资料</strong>现场做，不讲通用案例；练的是明天上班就要用的那件事。</p>
+        <ul class="dl">
           <li>管理层 AI 认知工作坊</li>
-          <li>岗位实战内训，每人跑通一个工作流</li>
+          <li>岗位实战内训，<strong>每人跑通一个工作流</strong></li>
           <li>团队共用的知识库与 Skill 库</li>
           <li>训后答疑与复盘</li>
         </ul>
-        <p class="res">交付：每个人手里<strong>一个已经在用的工作流</strong>。</p>
-      </div>
-      <div>
-        <span class="when">最后</span>
-        <h3>落地实施：数字员工上岗</h3>
-        <p class="who">把方案变成每天在跑的产线</p>
-        <p>我们来搭、来接、来调，<strong>跑稳了再交接给你的团队</strong>。关键决定留给人，每个动作留记录。</p>
-        <ul>
-          <li>客服、获客、资料、内容四类数字员工</li>
-          <li>官网改版与 GEO/SEO</li>
-          <li>交接文档与每周迭代</li>
-        </ul>
-        <p class="res">交付：<strong>在岗的数字员工</strong>和一份交接说明。</p>
-      </div>
-    </div>
+        <div class="res"><b>RESULT</b>培训结束时，<strong>每个人手里都有一个已经在用的工作流</strong>。</div>
+      </article>
 
-    <h3 class="sub">在岗的数字员工</h3>
-    <p>每个数字员工都有明确的岗位、汇报对象和不能自己做主的事。</p>
-    <div class="ids">
-      <div class="idc">
-        <div class="idc-top"><img src="assets/mimi-mark.svg" alt=""><span class="on">在岗</span></div>
-        <b>客服专员</b><span class="no num">DW-01</span>
-        <p>按知识库回答客户，答案带出处；查不到、谈到钱，转给人。</p>
-        <dl><dt>汇报给</dt><dd>客服主管</dd></dl>
-      </div>
-      <div class="idc">
-        <div class="idc-top"><img src="assets/mimi-mark.svg" alt=""><span class="on">在岗</span></div>
-        <b>获客专员</b><span class="no num">DW-02</span>
-        <p>导入达人和经销商名单，按画像打分，定制投放开发信，跟进回复。</p>
-        <dl><dt>汇报给</dt><dd>销售负责人</dd></dl>
-      </div>
-      <div class="idc">
-        <div class="idc-top"><img src="assets/mimi-mark.svg" alt=""><span class="on">在岗</span></div>
-        <b>资料专员</b><span class="no num">DW-03</span>
-        <p>每天 08:30 整理邮件出日报，起草回复；会议纪要和资料归档。</p>
-        <dl><dt>汇报给</dt><dd>行政或助理</dd></dl>
-      </div>
-      <div class="idc">
-        <div class="idc-top"><img src="assets/mimi-mark.svg" alt=""><span class="on">在岗</span></div>
-        <b>内容专员</b><span class="no num">DW-04</span>
-        <p>按产品资料写脚本，出宣传片和海报；事实只来自你的资料。</p>
-        <dl><dt>汇报给</dt><dd>市场负责人</dd></dl>
-      </div>
+      <article class="card feature wide2 rv">
+        <div class="tr">
+          <div>
+            <span class="no">03 · TRANSFORMATION</span>
+            <h3>数字化转型 · 数字员工上岗</h3>
+            <div class="for">把方案变成每天在跑的流水线</div>
+            <p>我们来搭、来接、来调，<strong>跑稳了再交接给你的团队</strong>。每条流水线都有护栏：<strong>关键决定留给人</strong>，每个动作留记录。</p>
+            <div class="mods">
+              <a href="#growth"><b>客服数字员工</b><span>按知识库回答，查不到转人工</span></a>
+              <a href="#growth"><b>获客数字员工</b><span>达人与 B 端主动建联、自动跟进</span></a>
+              <a href="#case"><b>官网与 GEO/SEO</b><span>搜得到你，AI 也答得出你</span></a>
+              <a href="#case"><b>内容数字员工</b><span>宣传片、数字人口播、海报</span></a>
+              <a href="#roi"><b>资料数字员工</b><span>邮件日报、资料归档、批量发信</span></a>
+              <a href="#method"><b>交接与迭代</b><span>写清交接，每周补一次</span></a>
+            </div>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="bar"><i></i><i></i><i></i><span>界面示意</span></div>
+            <div class="chat" id="chat">
+              <div class="msg u">会议桌能按我们的尺寸定制吗？</div>
+              <div class="msg a">可以，长度按需定制，下单前会发图纸确认。<span class="src">出处：产品手册_2026.pdf · 第 6 页</span></div>
+              <div class="msg u">佣金能给多少？</div>
+              <div class="msg h">涉及佣金 · 已转人工确认</div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="case">
+<!-- CASE -->
+<section class="s case" id="case">
   <div class="wrap">
-    <h2>同一家工厂官网，<span class="nb">改版前后。</span></h2>
-    <p class="lede">佛山一家移动空调工厂（HAFYOUNG）的外贸官网。拖动中间的滑块对比。</p>
-    <div class="compare" id="compare" style="--p:50%" tabindex="0" role="slider" aria-label="改版前后对比" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-      <img src="assets/case/after-desktop.jpg" alt="HAFYOUNG 官网改版后" loading="lazy">
-      <img class="before" src="assets/case/before-desktop.jpg" alt="HAFYOUNG 官网改版前" loading="lazy">
-      <span class="tag l">改版前</span><span class="tag r">改版后，已上线</span>
-      <div class="handle"></div>
+    <div class="head rv">
+      <span class="eyebrow">Case · HAFYOUNG</span>
+      <h2>同一家工厂官网，<br><span class="grad">优化前 vs 优化后</span>。</h2>
+      <p>佛山一家移动空调工厂的外贸官网。拖动中间的滑块对比。</p>
     </div>
-    <div class="caps2">
-      <p><b>改版前</b>一打开就弹表单，看不到产品；标题只有公司中文名。</p>
-      <p><b>改版后</b>首屏就是产品和 4 个型号；9 种语言；首屏下方嵌入宣传片。</p>
+
+    <div class="case-top">
+      <div class="compare rv" id="compare" style="--p:50%">
+        <img src="assets/case/after-desktop.jpg" alt="HAFYOUNG 官网优化后" loading="lazy">
+        <img class="before" src="assets/case/before-desktop.jpg" alt="HAFYOUNG 官网优化前" loading="lazy">
+        <span class="tag l">BEFORE</span><span class="tag r">AFTER · 已上线</span>
+        <div class="handle"></div>
+      </div>
+      <div class="case-side">
+        <div class="card rv d1"><h3>优化前</h3><ul class="bad"><li>一打开就弹表单，看不到产品</li><li>标题只有公司中文名</li><li>H1 是「Questions or Consulting」</li></ul></div>
+        <div class="card rv d2"><h3>优化后</h3><ul class="good"><li>首屏就是产品和 4 个型号</li><li>标题写清品牌与品类</li><li>首屏下方嵌入宣传片</li><li>9 种语言，阿拉伯语从右往左排</li></ul></div>
+      </div>
     </div>
-    <div class="facts">
-      <div><b class="num">39<span>→</span>80</b><p>SEO 评分</p></div>
-      <div><b class="num">38<span>→</span>73</b><p>GEO 评分：AI 搜索能否正确引用</p></div>
-      <div><b class="num">77<span>→</span>100</b><p>Lighthouse SEO 分</p></div>
-      <div><b class="num">1<span>→</span>7</b><p>买家常问 9 题，能直接答上的</p></div>
+
+    <div class="metrics">
+      <div class="metric hl rv"><small>SEO 评分</small><b><s>39</s><span class="cnt" data-to="80">80</span></b><span>标题、结构、收录、移动端</span></div>
+      <div class="metric hl rv d1"><small>GEO 评分</small><b><s>38</s><span class="cnt" data-to="73">73</span></b><span>AI 搜索能不能正确引用</span></div>
+      <div class="metric rv d2"><small>Lighthouse SEO</small><b><s>77</s><span class="cnt" data-to="100">100</span></b><span>手机端性能 29 → 68</span></div>
+      <div class="metric rv d3"><small>买家常问 9 题</small><b><s>1</s><span class="cnt" data-to="7">7</span></b><span>网站能直接答上的题数</span></div>
     </div>
+
     <div class="film">
-      <video src="assets/case/film.mp4" poster="assets/case/film.jpg" controls muted playsinline preload="none"></video>
-      <div>
-        <h3>44 秒宣传片，画面和配乐都用代码生成。</h3>
-        <p>事实只来自官网文案：型号、卖点、产地。分镜卡在节拍上，配乐和音效也是代码合成，无采样、无录音。放回官网首屏下方，也能单独发布。</p>
-        <a class="tlink" href="https://www.hafyoung-cooling.com" target="_blank" rel="noopener">打开上线的官网</a>
+      <video class="rv" src="assets/case/film.mp4" poster="assets/case/film.jpg" controls muted playsinline preload="none"></video>
+      <div class="rv d1">
+        <span class="eyebrow">Brand Film</span>
+        <h3 style="margin-top:16px">44 秒宣传片：<br>画面和配乐全部用代码生成</h3>
+        <p>事实只来自官网文案：型号、卖点、产地。分镜卡在节拍上，配乐和音效也是代码合成，<strong>无采样、无录音</strong>。</p>
+        <div class="kv"><span>1920×1080</span><span>24 fps</span><span>44.5 s</span><span>原创配乐</span></div>
+        <a class="btn ghost" style="margin-top:28px" href="https://www.hafyoung-cooling.com" target="_blank" rel="noopener">访问上线官网<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
     </div>
-    <p class="note">评分表为自拟，两轮用同一张表，只看前后变化（审计于 2026 年 10 月 27 日）。另有 26 个旧网址全部 301 跳转到新站对应型号，收录不丢。</p>
+    <p class="foot-note">评分表为自拟，两轮用同一张表，只看前后变化（审计 2026.10.27）。另有 26 个旧网址全部 301 跳转到新站对应型号，收录不丢。</p>
   </div>
 </section>
 
-<section class="sec" id="growth">
+<!-- GROWTH -->
+<section class="s growth" id="growth">
   <div class="wrap">
-    <h2>获客流水线：<span class="nb">从找到客户到成交。</span></h2>
-    <p class="lede">数字员工负责找、接、跟；<strong>人只在报价、合同、收款时出手</strong>。</p>
-    <ol class="steps">
-      <li><b>获客</b><span>客户画像、名单导入，AI 按画像打分</span></li>
-      <li><b>建联</b><span>个性化定制开发信，每日限量，自动跟进</span></li>
-      <li><b>承接</b><span>知识库客服 7×24，复杂问题转人工</span></li>
-      <li class="h"><b>成交</b><span>报价、合同、收款，由人拍板</span></li>
-      <li><b>复盘</b><span>看回复与转化，没答好的每周补回</span></li>
-    </ol>
-    <div class="grow">
-      <div>
+    <div class="head rv">
+      <span class="eyebrow">Growth Pipeline · 获客流水线</span>
+      <h2>获客流水线：<br><span class="grad">从找到客户到成交</span>。</h2>
+      <p>网站和内容负责<strong>被找到</strong>，AI 负责<strong>主动找、接得住、跟到底</strong>；人只在<strong>报价、合同、收款</strong>时出手。</p>
+    </div>
+
+    <div class="pipe rv">
+      <div><small>01</small><b>获客</b><span>客户画像 · 名单导入<br>AI 按画像打分</span></div>
+      <div><small>02</small><b>建联</b><span>个性化开发信<br>每日限量 · 自动跟进</span></div>
+      <div><small>03</small><b>承接</b><span>知识库客服 7×24<br>复杂问题转人工</span></div>
+      <div class="man"><small>04</small><b>成交</b><span>报价 · 合同 · 收款<br>人来拍板</span></div>
+      <div><small>05</small><b>复盘</b><span>回复与转化<br>没答好的每周补回</span></div>
+    </div>
+
+    <div class="caps">
+      <article class="card rv">
+        <span class="no">A · OUTREACH ENGINE</span>
+        <h3>主动建联引擎</h3>
+        <p>导入达人或经销商名单，AI <strong>按你的画像打分</strong>、起草开发信、<strong>收回复并自动跟进</strong>，对方回信它先起草回复。</p>
+        <div class="modes"><div><b>审核模式</b><span>每封信你点「通过」才发</span></div><div><b>自动模式</b><span>改动少了再放权，只放行不需要人看的</span></div></div>
+        <div class="guard"><span>TikTok 达人</span><span>B 端客户</span><span>企业邮箱收发</span><span>xlsx / csv 导入</span></div>
+      </article>
+      <article class="card rv d1">
+        <span class="no">B · TARGETED OUTREACH</span>
         <h3>个性化定制投放</h3>
-        <p>按<strong>目标市场、行业、语言</strong>定制开发信，每封写对称呼、产品和卖点，精准触达潜在客户。用你自己的邮箱和签名发出，没有接口也能发。</p>
-        <figure><img src="assets/case/outlook-sent.jpg" alt="Outlook 已发送的定制开发信，收件人已打码" loading="lazy"><figcaption>实测：面向德国经销商的一批定制德语开发信</figcaption></figure>
+        <p>按<strong>目标市场、行业、语言</strong>定制开发信，每封写对<strong>称呼、产品和卖点</strong>，精准触达潜在客户。用你自己的邮箱和签名发出，<strong>没有接口也能发</strong>。</p>
+        <div class="guard"><span>目标市场筛选</span><span>多语言</span><span>千人千面</span><span>自有邮箱发送</span></div>
+        <figure class="shot"><img src="assets/case/outlook-sent.jpg" alt="Outlook 已发送的开发信（收件人已打码）" loading="lazy"><figcaption>实测：面向德国经销商的一批定制德语开发信</figcaption></figure>
+      </article>
+      <article class="card rv d2">
+        <span class="no">C · GUARDRAILS</span>
+        <h3>放权，但不失控</h3>
+        <ul class="dl">
+          <li>提到<strong>佣金、价格、合同、退款</strong>，自动转人工</li>
+          <li>对方说退订，<strong>立刻停发</strong></li>
+          <li>每天新建联有上限，间隔发送</li>
+          <li><strong>一键暂停</strong>，每个动作留记录</li>
+          <li>放权参考：人改得越少，越可以交给自动</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="s" id="method">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">How we work · 方法</span>
+      <h2>先找到<span class="grad">最耗时的那件事</span>，<br>再把它交给 AI。</h2>
+    </div>
+    <div class="method rv">
+      <div><small>01 · 诊断</small><b>找一件事</b><p>从你<strong>现在最耗时的一项工作</strong>下手，不从工具下手。</p></div>
+      <div><small>02 · 搭建</small><b>先看中间结果</b><p>每一步<strong>先给你确认</strong>，再继续；缺数据写「待确认」，不编。</p></div>
+      <div><small>03 · 交付</small><b>交给别人能用</b><p>输入、步骤、输出、验收写清楚，<strong>换个人也能接着跑</strong>。</p></div>
+      <div><small>04 · 迭代</small><b>每周补一次</b><p>没答好的问题、没跑通的环节，<strong>每周补回去</strong>，越用越准。</p></div>
+    </div>
+    <div class="bar5">
+      <div class="rv"><b>能用</b><span>真实场景跑通一次</span></div>
+      <div class="rv d1"><b>能改</b><span>改动不用推倒重来</span></div>
+      <div class="rv d2"><b>能复用</b><span>同类工作一句话调用</span></div>
+      <div class="rv d3"><b>能追溯</b><span>每个判断都有来源</span></div>
+      <div class="rv d4"><b>能交接</b><span>下一个人知道从哪开始</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN CLASS -->
+<section class="open-wrap">
+  <div class="wrap">
+    <div class="open rv">
+      <div>
+        <span class="eyebrow">Open Class · 公开课</span>
+        <h3>想先体验？来一次 <span class="grad">AI 实战训练营</span></h3>
+        <p>两天一夜，围绕<strong>你自己的一个真实业务</strong>做完四个作业，结营时手机打开一个上线的业务网址。适合想先体验、再决定做企业内训或落地的老板。</p>
       </div>
-      <div class="grow-side">
-        <div>
-          <h3>主动建联</h3>
-          <p>导入达人或经销商名单，AI 按你的画像打分、起草、收回复并跟进。</p>
-          <p><strong>审核模式</strong>：每封信你点「通过」才发。<br><strong>自动模式</strong>：人改得越少，越可以放权。</p>
+      <div class="open-side">
+        <div class="days">
+          <div><small>00</small><b>业务卡片</b></div>
+          <div><small>01</small><b>知识库</b></div>
+          <div><small>02</small><b>PPT · 海报</b></div>
+          <div><small>03</small><b>口播视频</b></div>
+          <div><small>04</small><b>上线网站</b></div>
         </div>
-        <div>
-          <h3>护栏</h3>
-          <ul>
-            <li>提到佣金、价格、合同、退款，自动转人工</li>
-            <li>对方说退订，立刻停发</li>
-            <li>每天新建联有上限，间隔发送</li>
-            <li>一键暂停，每个动作留记录</li>
-          </ul>
-        </div>
+        <a class="btn ghost" href="#contact">咨询下一期<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="method">
-  <div class="wrap">
-    <h2><span class="nb">先找到最耗人的那件事，</span><span class="nb">再交给数字员工。</span></h2>
-    <ol class="steps four">
-      <li><b>找一件事</b><span>从现在最耗时的一项工作下手，不从工具下手。</span></li>
-      <li><b>先看中间结果</b><span>每一步先给你确认再继续；缺数据写「待确认」，不编。</span></li>
-      <li><b>交给别人能用</b><span>输入、步骤、输出、验收写清楚，换个人也能接着跑。</span></li>
-      <li><b>每周补一次</b><span>没答好的问题、没跑通的环节，每周补回去，越用越准。</span></li>
-    </ol>
-    <p class="std">交付标准：<strong>能用</strong>、<strong>能改</strong>、<strong>能复用</strong>、<strong>能追溯</strong>、<strong>能交接</strong>。</p>
-  </div>
-</section>
-
-<section class="open">
-  <div class="wrap">
-    <p><strong>想先体验？</strong>AI 实战训练营公开课：两天一夜，围绕你自己的一个真实业务做完四个作业，结营时手机打开一个上线的业务网址。<a class="tlink" href="#contact">咨询下一期</a></p>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <h2>先聊一件<span class="nb">最耗人的流程。</span></h2>
-    <p>30 分钟降本增效诊断：告诉我们你的行业和最耗人的一个流程，我们给你<strong>值不值得做、能省在哪、第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
-    <dl class="ways">
-      <div><dt>微信</dt><dd data-todo>待填写</dd></div>
-      <div><dt>邮箱</dt><dd data-todo>待填写</dd></div>
-      <div><dt>电话</dt><dd data-todo>待填写</dd></div>
-    </dl>
+    <img class="big rv" src="assets/mimi-mark.svg" alt="">
+    <h2 class="rv d1">先聊一件<br><span class="grad">你最耗时的工作</span>。</h2>
+    <p class="rv d2">30 分钟降本增效诊断：告诉我们你的行业和最耗人的一个流程，我们给你<strong>值不值得做</strong>、<strong>能省在哪</strong>和<strong>第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
+    <div class="ways">
+      <div class="rv"><small>微信</small><b data-todo>待填写</b></div>
+      <div class="rv d1"><small>邮箱</small><b data-todo>待填写</b></div>
+      <div class="rv d2"><small>电话</small><b data-todo>待填写</b></div>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/mimi-mark.svg" alt=""><b>觅咪科技</b><span>MIMI TECH</span></a>
+    <a class="brand" href="#top"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
+    <span>工具会更新，流程会迭代，真正属于你的工作方式会越来越清楚。</span>
     <span>© 2026 觅咪科技</span>
   </div>
 </footer>
 
 <script>
 (() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  const nav = $('#nav'), menu = $('#menu');
-  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 8);
+  const nav = $('#nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 20);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  menu.addEventListener('click', () => menu.setAttribute('aria-expanded', nav.classList.toggle('open')));
-  $$('#links a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', false); }));
+  $('#menu').addEventListener('click', () => nav.classList.toggle('open'));
+  $$('#links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
-  const done = $('#cDone'), wait = $('#cWait');
-  let nDone = 0, nWait = 0;
-  $$('.tk').forEach(t => t.addEventListener('animationiteration', () => {
-    const stamp = t.closest('.lane').querySelector('.stamp'), human = 'h' in t.dataset;
-    stamp.textContent = t.dataset.out;
-    stamp.classList.toggle('h', human);
-    stamp.classList.remove('hit'); void stamp.offsetWidth; stamp.classList.add('hit');
-    if (human) wait.textContent = ++nWait; else done.textContent = ++nDone;
-    const no = +t.dataset.no + 2;
-    t.dataset.no = no;
-    t.querySelector('small').textContent = '#' + String(no).padStart(4, '0');
+  const spot = $('#spot');
+  addEventListener('pointermove', e => {
+    spot.style.setProperty('--x', e.clientX + 'px');
+    spot.style.setProperty('--y', e.clientY + 'px');
+  }, { passive: true });
+
+  $$('.card').forEach(c => c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    c.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }));
 
-  const cmp = $('#compare');
-  const setP = v => {
-    v = Math.max(0, Math.min(100, v));
-    cmp.style.setProperty('--p', v + '%');
-    cmp.setAttribute('aria-valuenow', Math.round(v));
+  const track = $('#track');
+  track.innerHTML += track.innerHTML;
+
+  const counted = new WeakSet();
+  const count = el => {
+    if (counted.has(el) || reduce) return;
+    counted.add(el);
+    const to = +el.dataset.to, from = +el.parentElement.querySelector('s').textContent, t0 = performance.now();
+    const step = t => {
+      const k = Math.min(1, (t - t0) / 1400), v = from + (to - from) * (1 - Math.pow(1 - k, 3));
+      el.textContent = Math.round(v);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
   };
-  const fromX = x => { const r = cmp.getBoundingClientRect(); setP((x - r.left) / r.width * 100); };
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    $$('.cnt', e.target).forEach(count);
+    io.unobserve(e.target);
+  }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+
+  const cmp = $('#compare');
+  const setP = x => {
+    const r = cmp.getBoundingClientRect();
+    cmp.style.setProperty('--p', Math.max(0, Math.min(100, (x - r.left) / r.width * 100)) + '%');
+  };
   let drag = false;
-  cmp.addEventListener('pointerdown', e => { drag = true; cmp.setPointerCapture(e.pointerId); fromX(e.clientX); });
-  cmp.addEventListener('pointermove', e => drag && fromX(e.clientX));
+  cmp.addEventListener('pointerdown', e => { drag = true; cmp.setPointerCapture(e.pointerId); setP(e.clientX); });
+  cmp.addEventListener('pointermove', e => drag && setP(e.clientX));
   cmp.addEventListener('pointerup', () => drag = false);
   cmp.addEventListener('pointercancel', () => drag = false);
-  cmp.addEventListener('keydown', e => {
-    const v = +cmp.getAttribute('aria-valuenow');
-    if (e.key === 'ArrowLeft') { setP(v - 5); e.preventDefault(); }
-    if (e.key === 'ArrowRight') { setP(v + 5); e.preventDefault(); }
+
+  const msgs = $$('#chat .msg');
+  if (reduce) msgs.forEach(m => m.classList.add('on'));
+  else {
+    let i = 0;
+    const tick = () => {
+      if (i === msgs.length) { msgs.forEach(m => m.classList.remove('on')); i = 0; return setTimeout(tick, 700); }
+      msgs[i++].classList.add('on');
+      setTimeout(tick, i === msgs.length ? 3600 : 1300);
+    };
+    new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); tick(); } }).observe($('#chat'));
+  }
+
+  const stage = $('#stage3d'), con = $('#console');
+  stage.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    con.style.transform = `rotateY(${-9 + x * 10}deg) rotateX(${5 - y * 8}deg)`;
   });
+  stage.addEventListener('pointerleave', () => con.style.transform = '');
+  $$('.job').forEach(j => j.addEventListener('animationiteration', () => {
+    const o = j.closest('.lane').querySelector('.out');
+    o.textContent = j.dataset.out;
+    o.classList.toggle('h', 'h' in j.dataset);
+    o.classList.remove('flash'); void o.offsetWidth; o.classList.add('flash');
+  }));
 })();
 </script>
 </body>
