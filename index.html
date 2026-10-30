@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统</title>
+<meta name="description" content="觅咪科技帮企业把 AI 落到具体业务：AI 实战训练营、智能客服与主动获客、官网与 GEO/SEO 优化、AI 宣传片与内容生产。">
+<meta name="theme-color" content="#05070c">
+<link rel="icon" href="assets/mimi-mark.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统">
+<meta property="og:description" content="教团队用起来，把客服和获客交给 AI 跑，让客户和 AI 都找得到你。">
+<meta property="og:image" content="assets/mimi-mark-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 落地服务：AI 实战训练营、智能客服与主动获客、官网与 GEO/SEO 优化、AI 宣传片与内容生产。"}
+</script>
+<style>
+:root{
+  --bg:#05070c;--bg2:#0a0f1c;--ink:#f3f6fc;--ink2:#c6cedd;--muted:#8a94a9;--dim:#4b556b;
+  --line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.05);
+  --blue:#4d7bff;--blue2:#8eabff;--cobalt:#2a5cff;--glow:rgba(77,123,255,.35);
+  --sans:"Inter","PingFang SC","Noto Sans SC","Noto Sans CJK SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  --w:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+ul{list-style:none}
+strong{color:var(--ink);font-weight:700}
+.wrap{width:min(var(--w),100% - 48px);margin:0 auto}
+.mono{font-family:var(--mono)}
+.grad{background:linear-gradient(100deg,#fff 0%,#b9cbff 35%,#4d7bff 70%,#9db6ff 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 8s ease-in-out infinite}
+@keyframes sheen{50%{background-position:100% 0}}
+
+/* ambient */
+.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spot{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(600px circle at var(--x,50%) var(--y,30%),rgba(77,123,255,.07),transparent 60%)}
+.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(5,7,12,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:34px;height:34px}
+.brand b{display:block;font-size:17px;font-weight:800;letter-spacing:.1em;line-height:1.1}
+.brand small{display:block;font:500 10px/1 var(--mono);letter-spacing:.26em;color:var(--blue2);margin-top:4px}
+.links{display:flex;align-items:center;gap:34px;font-size:15px;color:var(--ink2)}
+.links a:not(.btn){position:relative;transition:color .2s}
+.links a:not(.btn):hover{color:#fff}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--blue);transform:scaleX(0);transition:transform .3s}
+.links a:not(.btn):hover::after{transform:scaleX(1)}
+.menu{display:none;background:none;border:0;color:var(--ink);width:40px;height:40px;cursor:pointer}
+.menu span{display:block;width:22px;height:2px;margin:5px auto;background:currentColor;transition:transform .3s,opacity .3s}
+
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;transition:transform .2s,box-shadow .3s,background .3s,border-color .3s;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,#4d7bff,#2a5cff);color:#fff;box-shadow:0 10px 30px -8px var(--glow),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px rgba(77,123,255,.6),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn.ghost:hover{border-color:rgba(142,171,255,.5);background:rgba(77,123,255,.08)}
+.btn.sm{height:40px;padding:0 18px;font-size:14px}
+.btn svg{width:16px;height:16px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 700px at 75% 45%,rgba(42,92,255,.22),transparent 65%),radial-gradient(700px 500px at 10% 90%,rgba(77,123,255,.08),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--blue2)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--ink2);margin-bottom:28px}
+.pill i{font-style:normal;font:600 11px/1 var(--mono);letter-spacing:.1em;padding:5px 8px;border-radius:999px;background:rgba(77,123,255,.18);color:var(--blue2)}
+.hero h1{font-size:clamp(44px,6vw,84px);line-height:1.08;font-weight:900;letter-spacing:-.02em}
+.hero p.lead{margin-top:28px;font-size:clamp(17px,1.5vw,20px);color:var(--ink2);max-width:560px;line-height:1.75}
+.hero .cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+.proof{margin-top:56px;display:grid;grid-template-columns:repeat(3,auto);gap:36px;justify-content:start}
+.proof div b{display:block;font:700 30px/1 var(--sans);letter-spacing:-.01em}
+.proof div b em{font-style:normal;color:var(--blue2)}
+.proof div span{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+
+.visual{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
+#globe{position:absolute;inset:-6%;width:112%;height:112%}
+.orb{position:absolute;inset:0;perspective:1100px;pointer-events:none}
+.orb3d{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid rgba(142,171,255,.28);transform-style:preserve-3d}
+.ring.r1{width:78%;height:78%;margin:-39% 0 0 -39%;animation:spin1 22s linear infinite}
+.ring.r2{width:62%;height:62%;margin:-31% 0 0 -31%;border-color:rgba(77,123,255,.4);animation:spin2 16s linear infinite}
+.ring::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#b9cbff;box-shadow:0 0 16px 4px rgba(142,171,255,.7)}
+@keyframes spin1{from{transform:rotateX(72deg) rotateZ(0)}to{transform:rotateX(72deg) rotateZ(360deg)}}
+@keyframes spin2{from{transform:rotateX(64deg) rotateY(18deg) rotateZ(360deg)}to{transform:rotateX(64deg) rotateY(18deg) rotateZ(0)}}
+.lens{position:absolute;left:50%;top:50%;width:36%;aspect-ratio:1;transform:translate(-50%,-50%) translateZ(40px);border-radius:32%;
+  background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.22),transparent 45%),linear-gradient(145deg,rgba(77,123,255,.28),rgba(10,16,40,.6));
+  border:1px solid rgba(185,203,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 30px 80px -20px rgba(42,92,255,.7),0 0 0 10px rgba(77,123,255,.05),inset 0 1px 0 rgba(255,255,255,.3);display:grid;place-items:center;animation:float 6s ease-in-out infinite}
+.lens img{width:62%;filter:drop-shadow(0 6px 24px rgba(77,123,255,.8))}
+@keyframes float{50%{transform:translate(-50%,-53%) translateZ(40px)}}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(12,18,36,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:13px;color:var(--ink2);white-space:nowrap;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);animation:bob 7s ease-in-out infinite}
+.chip b{color:#fff;font-weight:700}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:#3ddc97;box-shadow:0 0 10px #3ddc97}
+.chip .dot.b{background:var(--blue);box-shadow:0 0 10px var(--blue)}
+.chip .dot.y{background:#ffc35c;box-shadow:0 0 10px #ffc35c}
+.chip.c1{left:-2%;top:16%;transform:translateZ(90px)}
+.chip.c2{right:-4%;top:30%;animation-delay:-2s;transform:translateZ(120px)}
+.chip.c3{left:4%;bottom:18%;animation-delay:-4s;transform:translateZ(70px)}
+.chip.c4{right:2%;bottom:8%;animation-delay:-1s;transform:translateZ(100px)}
+@keyframes bob{50%{translate:0 -10px}}
+.scroll-hint{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font:500 11px/1 var(--mono);letter-spacing:.3em;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:12px}
+.scroll-hint::after{content:"";width:1px;height:40px;background:linear-gradient(var(--blue),transparent);animation:drip 2s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marquee{position:relative;border-block:1px solid var(--line2);padding:26px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:mq 50s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee .it{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:15px;font-weight:600;filter:grayscale(1) brightness(1.6);opacity:.7;transition:filter .3s,opacity .3s}
+.marquee .it:hover{filter:none;opacity:1}
+.marquee img{width:26px;height:26px;object-fit:contain;border-radius:6px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section.s{position:relative;padding:140px 0}
+.head{max-width:760px;margin-bottom:64px}
+.head h2{margin-top:18px;font-size:clamp(34px,4.2vw,56px);line-height:1.15;font-weight:800;letter-spacing:-.015em}
+.head p{margin-top:20px;font-size:18px;color:var(--ink2)}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{position:relative;border:1px solid var(--line);border-radius:24px;padding:36px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));overflow:hidden;isolation:isolate;transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(77,123,255,.16),transparent 60%);opacity:0;transition:opacity .4s}
+.card:hover{border-color:rgba(142,171,255,.32)}
+.card:hover::before{opacity:1}
+.card .no{font:500 12px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.card h3{margin-top:18px;font-size:28px;line-height:1.25;font-weight:800}
+.card .for{margin-top:10px;font-size:14px;color:var(--muted)}
+.card p{margin-top:18px;font-size:16px;color:var(--ink2)}
+.card .dl{margin-top:26px;display:grid;gap:10px}
+.card .dl li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink2)}
+.card .dl li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:6px;background:rgba(77,123,255,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238eabff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 8.5 2.6 2.5L12 5.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.card .res{margin-top:28px;padding-top:22px;border-top:1px dashed var(--line);font-size:15px;color:var(--ink2)}
+.card .res b{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2);margin-right:10px}
+.card.big{grid-column:span 4}
+.card.tall{grid-column:span 2;grid-row:span 2}
+.card.half{grid-column:span 3}
+.card.wide{grid-column:span 4}
+.card.feature{background:radial-gradient(600px 400px at 100% 0%,rgba(42,92,255,.25),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.days{margin-top:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.days div{padding:16px 14px;border:1px solid var(--line2);border-radius:14px;background:rgba(255,255,255,.02)}
+.days small{display:block;font:500 10px/1 var(--mono);letter-spacing:.16em;color:var(--dim)}
+.days b{display:block;margin-top:10px;font-size:15px}
+.days span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.5}
+.days div:last-child{border-color:rgba(77,123,255,.45);background:rgba(77,123,255,.10)}
+.guard{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.guard span{font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:rgba(255,255,255,.02)}
+
+/* platform mock */
+.mock{margin-top:28px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.7);overflow:hidden}
+.mock .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line2);font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--dim)}
+.mock .bar i{width:9px;height:9px;border-radius:50%;background:#2a3142}
+.mock .bar span{margin-left:auto}
+.chat{padding:18px;display:flex;flex-direction:column;gap:12px;min-height:288px}
+.msg{max-width:86%;padding:12px 15px;border-radius:16px;font-size:14px;line-height:1.6;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.msg.on{opacity:1;transform:none}
+.msg.u{align-self:flex-end;background:rgba(255,255,255,.07);border-bottom-right-radius:5px}
+.msg.a{align-self:flex-start;background:linear-gradient(135deg,rgba(77,123,255,.22),rgba(42,92,255,.12));border:1px solid rgba(77,123,255,.3);border-bottom-left-radius:5px}
+.msg .src{display:block;margin-top:8px;font:500 11px/1.4 var(--mono);color:var(--blue2)}
+.msg.h{align-self:center;max-width:100%;font-size:12.5px;padding:8px 14px;border-radius:999px;background:rgba(255,195,92,.1);border:1px solid rgba(255,195,92,.35);color:#ffd58c}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:24px}
+.flow span{font-size:13px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--ink2)}
+.flow i{font-style:normal;color:var(--dim)}
+
+/* case */
+.case{background:radial-gradient(1000px 600px at 20% 0%,rgba(42,92,255,.12),transparent 60%)}
+.case-top{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch}
+.compare{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/900;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 40px 100px -40px rgba(42,92,255,.5)}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.compare .before{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 20px rgba(142,171,255,.9)}
+.compare .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(10,16,40,.8) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/22px no-repeat;border:1.5px solid #fff;backdrop-filter:blur(6px)}
+.compare .tag{position:absolute;top:16px;padding:6px 12px;border-radius:999px;font:600 11px/1 var(--mono);letter-spacing:.14em;background:rgba(5,7,12,.75);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.compare .tag.l{left:16px;color:#ff9a9a}
+.compare .tag.r{right:16px;color:#7ee8b4}
+.case-side{display:flex;flex-direction:column;gap:18px}
+.case-side .card{padding:30px;flex:1}
+.case-side h3{font-size:24px}
+.bad,.good{display:grid;gap:8px;margin-top:16px;font-size:14.5px}
+.bad li,.good li{display:flex;gap:10px;color:var(--ink2)}
+.bad li::before{content:"×";color:#ff7a7a;font-weight:700}
+.good li::before{content:"✓";color:#58e0a0;font-weight:700}
+.metrics{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.metric{padding:28px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.02)}
+.metric small{font:500 11px/1 var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.metric b{display:flex;align-items:baseline;gap:10px;margin-top:14px;font-size:44px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.metric b s{text-decoration:none;font-size:22px;color:var(--dim);font-weight:600}
+.metric b s::after{content:" →";color:var(--blue2)}
+.metric>span{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.metric .cnt{color:#fff}
+.metric.hl{border-color:rgba(77,123,255,.4);background:linear-gradient(160deg,rgba(77,123,255,.16),rgba(255,255,255,.01))}
+.film{margin-top:18px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center}
+.film video{width:100%;border-radius:22px;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+.film h3{font-size:26px;font-weight:800;line-height:1.3}
+.film p{margin-top:14px;color:var(--ink2);font-size:16px}
+.film .kv{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.film .kv span{font:500 12px/1 var(--mono);padding:8px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink2)}
+.foot-note{margin-top:22px;font-size:12.5px;color:var(--dim)}
+.foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
+
+/* automation */
+.auto{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.auto h2{font-size:clamp(32px,3.4vw,46px)}
+.auto img{border-radius:20px;border:1px solid var(--line);box-shadow:0 40px 100px -40px rgba(0,0,0,.9)}
+.steps3{margin-top:30px;display:grid;gap:14px}
+.steps3>div{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:18px 20px;border:1px solid var(--line2);border-radius:16px;background:rgba(255,255,255,.02)}
+.steps3 i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(77,123,255,.15);color:var(--blue2);font:700 15px/1 var(--mono)}
+.steps3 b{display:block;font-size:17px}
+.steps3 span{display:block;margin-top:3px;font-size:14px;color:var(--muted)}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.method div{position:relative;padding:36px 30px 40px;border-right:1px solid var(--line);transition:background .3s}
+.method div:last-child{border-right:0}
+.method div:hover{background:rgba(77,123,255,.06)}
+.method small{font:500 12px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.method b{display:block;margin-top:22px;font-size:26px;font-weight:800}
+.method p{margin-top:12px;font-size:15px;color:var(--ink2)}
+.method div::after{content:"";position:absolute;left:30px;right:30px;bottom:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.method div:hover::after{transform:scaleX(1)}
+.bar5{margin-top:22px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.bar5 div{padding:18px 20px;border-radius:16px;border:1px solid var(--line2);background:rgba(255,255,255,.015)}
+.bar5 b{font-size:18px}
+.bar5 span{display:block;margin-top:4px;font-size:13px;color:var(--muted)}
+
+/* contact */
+.contact{position:relative;padding:160px 0;overflow:hidden;text-align:center}
+.contact::before{content:"";position:absolute;left:50%;top:50%;width:1100px;height:700px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(42,92,255,.35),transparent);filter:blur(20px)}
+.contact .wrap{position:relative}
+.contact img.big{width:96px;margin:0 auto 34px;filter:drop-shadow(0 10px 40px rgba(77,123,255,.8))}
+.contact h2{font-size:clamp(38px,5.4vw,72px);line-height:1.12;font-weight:900;letter-spacing:-.02em}
+.contact p{margin:24px auto 0;max-width:620px;font-size:18px;color:var(--ink2)}
+.ways{margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;text-align:left}
+.ways div{padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.6);backdrop-filter:blur(10px)}
+.ways small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--muted)}
+.ways b{display:block;margin-top:10px;font-size:17px;word-break:break-all}
+.ways b[data-todo]{color:var(--dim)}
+
+footer{border-top:1px solid var(--line2);padding:36px 0;font-size:13px;color:var(--dim)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* responsive */
+@media (max-width:1080px){
+  .hero .wrap{grid-template-columns:1fr}
+  .visual{max-width:460px;margin-top:20px}
+  .bento{grid-template-columns:1fr 1fr}
+  .card.big,.card.tall,.card.half,.card.wide{grid-column:span 2;grid-row:auto}
+  .case-top,.film,.auto{grid-template-columns:1fr}
+  .metrics{grid-template-columns:1fr 1fr}
+  .method{grid-template-columns:1fr 1fr}
+  .method div:nth-child(2){border-right:0}
+  .method div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .bar5{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  .links{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 24px;background:rgba(5,7,12,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  .links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line2)}
+  .links .btn{margin-top:16px;justify-content:center}
+  .nav.open .links{opacity:1;transform:none;pointer-events:auto}
+  .nav.open{background:rgba(5,7,12,.96)}
+  .nav.open .menu span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav.open .menu span:nth-child(2){opacity:0}
+  .nav.open .menu span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .menu{display:block}
+  section.s{padding:96px 0}
+  .proof{grid-template-columns:1fr 1fr;gap:26px}
+  .card{padding:26px}
+  .card h3{font-size:24px}
+  .days{grid-template-columns:1fr 1fr}
+  .metrics{grid-template-columns:1fr}
+  .metric b{font-size:38px}
+  .method{grid-template-columns:1fr}
+  .method div{border-right:0;border-bottom:1px solid var(--line)}
+  .method div:last-child{border-bottom:0}
+  .bar5{grid-template-columns:1fr 1fr}
+  .ways{grid-template-columns:1fr}
+  .chip{font-size:11.5px;padding:8px 11px}
+  .chip.c2{right:-2%}
+  .scroll-hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="spot" id="spot"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="觅咪科技 首页"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
+    <nav class="links" id="links">
+      <a href="#services">业务</a>
+      <a href="#case">案例</a>
+      <a href="#auto">自动化</a>
+      <a href="#method">方法</a>
+      <a class="btn primary sm" href="#contact">预约业务诊断</a>
+    </nav>
+    <button class="menu" id="menu" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="pill rv"><i>MIMI TECH</i>企业 AI 落地 · 从培训到上线</div>
+      <h1 class="rv d1">把 AI 变成<br>你公司的<br><span class="grad">工作系统</span>。</h1>
+      <p class="lead rv d2">觅咪科技做三件事：<strong>教团队用起来</strong>，<strong>把客服和获客交给 AI 跑</strong>，<strong>让客户和 AI 都找得到你</strong>。不讲概念，每一项都交付一个能用的结果。</p>
+      <div class="cta rv d3">
+        <a class="btn primary" href="#contact">预约一次业务诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn ghost" href="#case">看真实案例</a>
+      </div>
+      <div class="proof rv d4">
+        <div><b><em>SEO</em> 39→80</b><span>外贸官网改版前后</span></div>
+        <div><b><em>GEO</em> 38→73</b><span>AI 搜索可引用度</span></div>
+        <div><b>2 天 1 夜</b><span>训练营结营带走一个上线网址</span></div>
+      </div>
+    </div>
+    <div class="visual" id="visual">
+      <canvas id="globe"></canvas>
+      <div class="orb"><div class="orb3d" id="orb3d">
+        <div class="ring r1"></div><div class="ring r2"></div>
+        <div class="lens"><img src="assets/mimi-mark.svg" alt="觅咪科技"></div>
+        <div class="chip c1"><span class="dot"></span>知识库客服 · <b>答案带出处</b></div>
+        <div class="chip c2"><span class="dot b"></span>达人建联 · <b>自动跟进</b></div>
+        <div class="chip c3"><span class="dot y"></span>谈到佣金 → <b>转人工</b></div>
+        <div class="chip c4"><span class="dot b"></span>宣传片 · <b>44.5 秒代码生成</b></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<div class="marquee" aria-label="我们熟悉的 AI 工具">
+  <div class="track" id="track">
+    <div class="it"><img src="assets/logos/openai.svg" alt="">ChatGPT</div>
+    <div class="it"><img src="assets/logos/codex.svg" alt="">Codex</div>
+    <div class="it"><img src="assets/logos/claudecode.svg" alt="">Claude Code</div>
+    <div class="it"><img src="assets/logos/deepseek.svg" alt="">DeepSeek</div>
+    <div class="it"><img src="assets/logos/doubao.svg" alt="">豆包</div>
+    <div class="it"><img src="assets/logos/kimi.svg" alt="">Kimi</div>
+    <div class="it"><img src="assets/logos/qianwen.svg" alt="">通义千问</div>
+    <div class="it"><img src="assets/logos/yuanbao.svg" alt="">元宝</div>
+    <div class="it"><img src="assets/logos/gemini.svg" alt="">Gemini</div>
+    <div class="it"><img src="assets/logos/workbuddy.svg" alt="">WorkBuddy</div>
+    <div class="it"><img src="assets/logos/grokbot.svg" alt="">Grokbot</div>
+    <div class="it"><img src="assets/logos/feishu.png" alt="">飞书</div>
+    <div class="it"><img src="assets/logos/wecom.png" alt="">企业微信</div>
+    <div class="it"><img src="assets/logos/dingtalk.png" alt="">钉钉</div>
+    <div class="it"><img src="assets/logos/dify.svg" alt="">Dify</div>
+    <div class="it"><img src="assets/logos/coze.svg" alt="">扣子</div>
+    <div class="it"><img src="assets/logos/heygen.png" alt="">HeyGen</div>
+    <div class="it"><img src="assets/logos/kling.svg" alt="">可灵</div>
+    <div class="it"><img src="assets/logos/jimeng.svg" alt="">即梦</div>
+    <div class="it"><img src="assets/logos/hailuo.svg" alt="">海螺</div>
+    <div class="it"><img src="assets/logos/minimax.svg" alt="">MiniMax</div>
+    <div class="it"><img src="assets/logos/midjourney.svg" alt="">Midjourney</div>
+    <div class="it"><img src="assets/logos/suno.svg" alt="">Suno</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What we do · 业务</span>
+      <h2>四项业务，<br>每一项都<span class="grad">交付结果</span>。</h2>
+      <p>不卖工具账号，不做一次性演示。交付的是<strong>你的团队明天就能接着用</strong>的东西。</p>
+    </div>
+
+    <div class="bento">
+      <article class="card big feature rv">
+        <span class="no">01 · TRAINING</span>
+        <h3>AI 实战训练营</h3>
+        <div class="for">给老板和业务骨干 · 两天一夜 · 线下</div>
+        <p>每个人围绕<strong>自己的一个真实业务</strong>，做完四个作业。不是听课，是现场把东西做出来。</p>
+        <div class="days">
+          <div><small>作业 00</small><b>业务卡片</b><span>第一个 Skill</span></div>
+          <div><small>作业 01</small><b>知识库</b><span>每天 08:30 邮件日报</span></div>
+          <div><small>作业 02</small><b>PPT + 海报</b><span>5 页讲稿 · 品牌规范</span></div>
+          <div><small>作业 03</small><b>口播视频</b><span>60 秒 · 可直接发布</span></div>
+          <div><small>作业 04</small><b>上线网站</b><span>手机能打开的网址</span></div>
+        </div>
+        <div class="res"><b>RESULT</b>结营时<strong>手机打开一个网址，整个业务都在里面</strong>，回去就能用来获客。</div>
+      </article>
+
+      <article class="card tall rv d1">
+        <span class="no">02 · SUPPORT & OUTREACH</span>
+        <h3>智能客服<br>与主动获客</h3>
+        <div class="for">有咨询量、要找达人和经销商的团队</div>
+        <p>客户来问，<strong>按你的知识库回答并带出处</strong>；没人来问，它<strong>主动给达人和 B 端客户发开发信、跟进、起草回复</strong>。</p>
+        <div class="mock" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span>界面示意</span></div>
+          <div class="chat" id="chat">
+            <div class="msg u">会议桌能按我们的尺寸定制吗？</div>
+            <div class="msg a">可以，长度按需定制，下单前会发图纸确认。<span class="src">出处：产品手册_2026.pdf · 第 6 页</span></div>
+            <div class="msg u">佣金能给多少？</div>
+            <div class="msg h">涉及佣金 · 已转人工确认</div>
+          </div>
+        </div>
+        <div class="guard"><span>谈钱谈合同转人工</span><span>每日限量</span><span>退订即停</span><span>一键暂停</span></div>
+      </article>
+
+      <article class="card big rv">
+        <span class="no">03 · WEBSITE · SEO / GEO</span>
+        <h3>官网改版与 GEO/SEO</h3>
+        <div class="for">外贸工厂、品牌方、门店</div>
+        <p>客户在搜索引擎里搜得到你，<strong>问 AI 时 AI 也答得出你</strong>。从官网重做到平台信源，一份事实底稿铺到所有地方。</p>
+        <div class="flow"><span>事实底稿</span><i>→</i><span>多语言官网</span><i>→</i><span>结构化数据 · llms.txt</span><i>→</i><span>旧网址 301</span><i>→</i><span>1688 · 社媒 · 百科</span><i>→</i><span>每周 AI 复测</span></div>
+        <div class="res"><b>RESULT</b>样例工厂官网 <strong>SEO 39 → 80，GEO 38 → 73</strong>，已上线。</div>
+      </article>
+
+      <article class="card half rv d1">
+        <span class="no">04 · CONTENT</span>
+        <h3>AI 宣传片与内容</h3>
+        <div class="for">品牌片 · 数字人口播 · 海报 · PPT</div>
+        <p>画面和配乐<strong>全部用代码生成</strong>的品牌片；60 秒数字人口播；海报和路演 PPT。<strong>事实只来自你的资料</strong>，不编数字。</p>
+        <div class="res"><b>RESULT</b>一条素材两处用：<strong>嵌进官网，也能单独发布</strong>。</div>
+      </article>
+
+      <article class="card half rv d2">
+        <span class="no">05 · AUTOMATION</span>
+        <h3>日常流程自动化</h3>
+        <div class="for">邮件、日报、批量开发信、资料整理</div>
+        <p>每天 08:30 自动分类邮件、起草回复；让 AI <strong>自己操作 Outlook</strong> 把一批开发信发完。<strong>只起草、人确认、留记录</strong>。</p>
+        <div class="res"><b>RESULT</b>重复动作交出去，<strong>老板只做判断</strong>。</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CASE -->
+<section class="s case" id="case">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Case · HAFYOUNG</span>
+      <h2>同一家工厂官网，<br><span class="grad">优化前 vs 优化后</span>。</h2>
+      <p>佛山一家移动空调工厂的外贸官网。拖动中间的滑块对比。</p>
+    </div>
+
+    <div class="case-top">
+      <div class="compare rv" id="compare" style="--p:50%">
+        <img src="assets/case/after-desktop.jpg" alt="HAFYOUNG 官网优化后" loading="lazy">
+        <img class="before" src="assets/case/before-desktop.jpg" alt="HAFYOUNG 官网优化前" loading="lazy">
+        <span class="tag l">BEFORE</span><span class="tag r">AFTER · 已上线</span>
+        <div class="handle"></div>
+      </div>
+      <div class="case-side">
+        <div class="card rv d1"><h3>优化前</h3><ul class="bad"><li>一打开就弹表单，看不到产品</li><li>标题只有公司中文名</li><li>H1 是「Questions or Consulting」</li></ul></div>
+        <div class="card rv d2"><h3>优化后</h3><ul class="good"><li>首屏就是产品和 4 个型号</li><li>标题写清品牌与品类</li><li>首屏下方嵌入宣传片</li><li>9 种语言，阿拉伯语从右往左排</li></ul></div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric hl rv"><small>SEO 评分</small><b><s>39</s><span class="cnt" data-to="80">80</span></b><span>标题、结构、收录、移动端</span></div>
+      <div class="metric hl rv d1"><small>GEO 评分</small><b><s>38</s><span class="cnt" data-to="73">73</span></b><span>AI 搜索能不能正确引用</span></div>
+      <div class="metric rv d2"><small>Lighthouse SEO</small><b><s>77</s><span class="cnt" data-to="100">100</span></b><span>手机端性能 29 → 68</span></div>
+      <div class="metric rv d3"><small>买家常问 9 题</small><b><s>1</s><span class="cnt" data-to="7">7</span></b><span>网站能直接答上的题数</span></div>
+    </div>
+
+    <div class="film">
+      <video class="rv" src="assets/case/film.mp4" poster="assets/case/film.jpg" controls muted playsinline preload="none"></video>
+      <div class="rv d1">
+        <span class="eyebrow">Brand Film</span>
+        <h3 style="margin-top:16px">44 秒宣传片：<br>画面和配乐全部用代码生成</h3>
+        <p>事实只来自官网文案：型号、卖点、产地。分镜卡在节拍上，配乐和音效也是代码合成，<strong>无采样、无录音</strong>。</p>
+        <div class="kv"><span>1920×1080</span><span>24 fps</span><span>44.5 s</span><span>原创配乐</span></div>
+        <a class="btn ghost" style="margin-top:28px" href="https://www.hafyoung-cooling.com" target="_blank" rel="noopener">访问上线官网<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+    <p class="foot-note">评分表为自拟，两轮用同一张表，只看前后变化（审计 2026.10.27）。另有 26 个旧网址全部 301 跳转到新站对应型号，收录不丢。</p>
+  </div>
+</section>
+
+<!-- AUTOMATION -->
+<section class="s" id="auto">
+  <div class="wrap auto">
+    <div class="rv">
+      <span class="eyebrow">Computer Use · 获客实例</span>
+      <div class="head" style="margin-bottom:0"><h2>AI 自己操作 Outlook，<br>把一批开发信<span class="grad">发完</span>。</h2></div>
+      <div class="steps3">
+        <div><i>A</i><div><b>交代任务</b><span>一张名单表，一封范本</span></div></div>
+        <div><i>B</i><div><b>它自己操作 Outlook</b><span>看着屏幕填收件人、贴正文、点发送</span></div></div>
+        <div><i>C</i><div><b>发完自己核对</b><span>3 分钟发完一批，再逐封核对</span></div></div>
+      </div>
+      <p class="foot-note">不用配接口，用你自己的邮箱和签名。护栏：先发给自己检查 · 限量、间隔发 · 发欧盟前确认当地规定。</p>
+    </div>
+    <img class="rv d1" src="assets/case/outlook-sent.jpg" alt="Outlook 已发送的开发信（收件人已打码）" loading="lazy">
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="s" id="method">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">How we work · 方法</span>
+      <h2>先找到<span class="grad">最耗时的那件事</span>，<br>再把它交给 AI。</h2>
+    </div>
+    <div class="method rv">
+      <div><small>01 · 诊断</small><b>找一件事</b><p>从你<strong>现在最耗时的一项工作</strong>下手，不从工具下手。</p></div>
+      <div><small>02 · 搭建</small><b>先看中间结果</b><p>每一步<strong>先给你确认</strong>，再继续；缺数据写「待确认」，不编。</p></div>
+      <div><small>03 · 交付</small><b>交给别人能用</b><p>输入、步骤、输出、验收写清楚，<strong>换个人也能接着跑</strong>。</p></div>
+      <div><small>04 · 迭代</small><b>每周补一次</b><p>没答好的问题、没跑通的环节，<strong>每周补回去</strong>，越用越准。</p></div>
+    </div>
+    <div class="bar5">
+      <div class="rv"><b>能用</b><span>真实场景跑通一次</span></div>
+      <div class="rv d1"><b>能改</b><span>改动不用推倒重来</span></div>
+      <div class="rv d2"><b>能复用</b><span>同类工作一句话调用</span></div>
+      <div class="rv d3"><b>能追溯</b><span>每个判断都有来源</span></div>
+      <div class="rv d4"><b>能交接</b><span>下一个人知道从哪开始</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <img class="big rv" src="assets/mimi-mark.svg" alt="">
+    <h2 class="rv d1">先聊一件<br><span class="grad">你最耗时的工作</span>。</h2>
+    <p class="rv d2">30 分钟业务诊断：告诉我们你的行业和最头疼的一个环节，我们给你一个<strong>能落地的 AI 方案</strong>和<strong>第一步该做什么</strong>。</p>
+    <div class="ways">
+      <div class="rv"><small>微信</small><b data-todo>待填写</b></div>
+      <div class="rv d1"><small>邮箱</small><b data-todo>待填写</b></div>
+      <div class="rv d2"><small>电话</small><b data-todo>待填写</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
+    <span>工具会更新，流程会迭代，真正属于你的工作方式会越来越清楚。</span>
+    <span>© 2026 觅咪科技</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  const nav = $('#nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  $('#menu').addEventListener('click', () => nav.classList.toggle('open'));
+  $$('#links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  const spot = $('#spot');
+  addEventListener('pointermove', e => {
+    spot.style.setProperty('--x', e.clientX + 'px');
+    spot.style.setProperty('--y', e.clientY + 'px');
+  }, { passive: true });
+
+  $$('.card').forEach(c => c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }));
+
+  const track = $('#track');
+  track.innerHTML += track.innerHTML;
+
+  const counted = new WeakSet();
+  const count = el => {
+    if (counted.has(el) || reduce) return;
+    counted.add(el);
+    const to = +el.dataset.to, from = +el.parentElement.querySelector('s').textContent, t0 = performance.now();
+    const step = t => {
+      const k = Math.min(1, (t - t0) / 1400), v = from + (to - from) * (1 - Math.pow(1 - k, 3));
+      el.textContent = Math.round(v);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    $$('.cnt', e.target).forEach(count);
+    io.unobserve(e.target);
+  }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+
+  const cmp = $('#compare');
+  const setP = x => {
+    const r = cmp.getBoundingClientRect();
+    cmp.style.setProperty('--p', Math.max(0, Math.min(100, (x - r.left) / r.width * 100)) + '%');
+  };
+  let drag = false;
+  cmp.addEventListener('pointerdown', e => { drag = true; cmp.setPointerCapture(e.pointerId); setP(e.clientX); });
+  cmp.addEventListener('pointermove', e => drag && setP(e.clientX));
+  cmp.addEventListener('pointerup', () => drag = false);
+  cmp.addEventListener('pointercancel', () => drag = false);
+
+  const msgs = $$('#chat .msg');
+  if (reduce) msgs.forEach(m => m.classList.add('on'));
+  else {
+    let i = 0;
+    const tick = () => {
+      if (i === msgs.length) { msgs.forEach(m => m.classList.remove('on')); i = 0; return setTimeout(tick, 700); }
+      msgs[i++].classList.add('on');
+      setTimeout(tick, i === msgs.length ? 3600 : 1300);
+    };
+    new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); tick(); } }).observe($('#chat'));
+  }
+
+  const visual = $('#visual'), orb = $('#orb3d'), cv = $('#globe'), ctx = cv.getContext('2d');
+  const N = 1100, pts = [];
+  for (let i = 0; i < N; i++) {
+    const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = i * 2.39996323;
+    pts.push([Math.cos(th) * r, y, Math.sin(th) * r]);
+  }
+  let W = 0, H = 0, dpr = 1, rotY = 0, tx = 0, ty = 0, mx = 0, my = 0, live = true;
+  const size = () => {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  new ResizeObserver(size).observe(cv); size();
+  visual.addEventListener('pointermove', e => {
+    const r = visual.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5;
+    orb.style.transform = `rotateY(${mx * 18}deg) rotateX(${-my * 18}deg)`;
+  });
+  visual.addEventListener('pointerleave', () => { mx = my = 0; orb.style.transform = ''; });
+  new IntersectionObserver(es => live = es[0].isIntersecting).observe(visual);
+  const draw = () => {
+    if (live && W) {
+      rotY += reduce ? 0 : .0024; tx += (my * .6 - tx) * .05; ty += (mx * .9 - ty) * .05;
+      const ay = rotY + ty, ax = .32 + tx, cy = Math.cos(ay), sy = Math.sin(ay), cx = Math.cos(ax), sx = Math.sin(ax);
+      const R = Math.min(W, H) * .4, ox = W / 2, oy = H / 2;
+      ctx.clearRect(0, 0, W, H);
+      for (const [x, y, z] of pts) {
+        const x1 = x * cy - z * sy, z1 = x * sy + z * cy, y1 = y * cx - z1 * sx, z2 = y * sx + z1 * cx;
+        const p = 2.6 / (2.6 + z2), d = (1 - z2) / 2;
+        ctx.globalAlpha = .08 + d * .72;
+        ctx.fillStyle = d > .62 ? '#b9cbff' : '#4d7bff';
+        const s = (.5 + d * 1.5) * p;
+        ctx.fillRect(ox + x1 * R * p - s / 2, oy + y1 * R * p - s / 2, s, s);
+      }
+      ctx.globalAlpha = 1;
+    }
+    if (!reduce) requestAnimationFrame(draw);
+  };
+  draw();
+})();
+</script>
+</body>
+</html>
