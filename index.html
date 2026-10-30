@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统</title>
-<meta name="description" content="觅咪科技为企业提供 AI 咨询、企业培训和数字化转型落地：知识库与智能客服、AI 获客系统、官网与 GEO/SEO、AI 内容生产、流程自动化。">
+<title>觅咪科技 MIMI TECH｜降本增效，交给数字员工</title>
+<meta name="description" content="觅咪科技帮企业降本增效：AI 咨询、企业培训、数字化转型落地，把重复流程交给数字员工——知识库与智能客服、AI 获客系统、官网与 GEO/SEO、AI 内容生产、流程自动化。">
 <meta name="theme-color" content="#05070c">
 <link rel="icon" href="assets/mimi-mark.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="觅咪科技 MIMI TECH｜把 AI 变成企业的工作系统">
+<meta property="og:title" content="觅咪科技 MIMI TECH｜降本增效，交给数字员工">
 <meta property="og:description" content="AI 咨询、企业培训、数字化转型落地：先诊断，再培训，最后把系统搭起来、跑起来。">
 <meta property="og:image" content="assets/mimi-mark-1024.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,43 +76,66 @@ strong{color:var(--ink);font-weight:700}
 .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--ink2);margin-bottom:28px}
 .pill i{font-style:normal;font:600 11px/1 var(--mono);letter-spacing:.1em;padding:5px 8px;border-radius:999px;background:rgba(77,123,255,.18);color:var(--blue2)}
-.hero h1{font-size:clamp(44px,6vw,84px);line-height:1.08;font-weight:900;letter-spacing:-.02em}
+.hero h1 .nw{white-space:nowrap}
+.hero h1{font-size:clamp(40px,5.6vw,80px);line-height:1.08;font-weight:900;letter-spacing:-.02em}
 .hero p.lead{margin-top:28px;font-size:clamp(17px,1.5vw,20px);color:var(--ink2);max-width:560px;line-height:1.75}
 .hero .cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
 .proof{margin-top:56px;display:grid;grid-template-columns:repeat(3,auto);gap:36px;justify-content:start}
-.proof div b{display:block;font:700 30px/1 var(--sans);letter-spacing:-.01em}
+.proof div b{white-space:nowrap;display:block;font:700 30px/1 var(--sans);letter-spacing:-.01em}
 .proof div b em{font-style:normal;color:var(--blue2)}
 .proof div span{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
 
-.visual{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:center}
-#globe{position:absolute;inset:-6%;width:112%;height:112%}
-.orb{position:absolute;inset:0;perspective:1100px;pointer-events:none}
-.orb3d{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid rgba(142,171,255,.28);transform-style:preserve-3d}
-.ring.r1{width:78%;height:78%;margin:-39% 0 0 -39%;animation:spin1 22s linear infinite}
-.ring.r2{width:62%;height:62%;margin:-31% 0 0 -31%;border-color:rgba(77,123,255,.4);animation:spin2 16s linear infinite}
-.ring::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#b9cbff;box-shadow:0 0 16px 4px rgba(142,171,255,.7)}
-@keyframes spin1{from{transform:rotateX(72deg) rotateZ(0)}to{transform:rotateX(72deg) rotateZ(360deg)}}
-@keyframes spin2{from{transform:rotateX(64deg) rotateY(18deg) rotateZ(360deg)}to{transform:rotateX(64deg) rotateY(18deg) rotateZ(0)}}
-.lens{position:absolute;left:50%;top:50%;width:36%;aspect-ratio:1;transform:translate(-50%,-50%) translateZ(40px);border-radius:32%;
-  background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.22),transparent 45%),linear-gradient(145deg,rgba(77,123,255,.28),rgba(10,16,40,.6));
-  border:1px solid rgba(185,203,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  box-shadow:0 30px 80px -20px rgba(42,92,255,.7),0 0 0 10px rgba(77,123,255,.05),inset 0 1px 0 rgba(255,255,255,.3);display:grid;place-items:center;animation:float 6s ease-in-out infinite}
-.lens img{width:62%;filter:drop-shadow(0 6px 24px rgba(77,123,255,.8))}
-@keyframes float{50%{transform:translate(-50%,-53%) translateZ(40px)}}
-.chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(12,18,36,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:13px;color:var(--ink2);white-space:nowrap;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);animation:bob 7s ease-in-out infinite}
-.chip b{color:#fff;font-weight:700}
-.chip .dot{width:8px;height:8px;border-radius:50%;background:#3ddc97;box-shadow:0 0 10px #3ddc97}
-.chip .dot.b{background:var(--blue);box-shadow:0 0 10px var(--blue)}
-.chip .dot.y{background:#ffc35c;box-shadow:0 0 10px #ffc35c}
-.chip.c1{left:-2%;top:16%;transform:translateZ(90px)}
-.chip.c2{right:-4%;top:30%;animation-delay:-2s;transform:translateZ(120px)}
-.chip.c3{left:4%;bottom:18%;animation-delay:-4s;transform:translateZ(70px)}
-.chip.c4{right:2%;bottom:8%;animation-delay:-1s;transform:translateZ(100px)}
-@keyframes bob{50%{translate:0 -10px}}
-.scroll-hint{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font:500 11px/1 var(--mono);letter-spacing:.3em;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:12px}
-.scroll-hint::after{content:"";width:1px;height:40px;background:linear-gradient(var(--blue),transparent);animation:drip 2s ease-in-out infinite}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* digital workforce console */
+.stage3d{perspective:1600px}
+.console{position:relative;border-radius:22px;border:1px solid rgba(142,171,255,.22);background:linear-gradient(180deg,rgba(13,20,42,.94),rgba(6,9,20,.94));box-shadow:0 50px 120px -40px rgba(42,92,255,.6),inset 0 1px 0 rgba(255,255,255,.06);transform:rotateY(-9deg) rotateX(5deg);transition:transform .6s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.console::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.06),transparent 35%);pointer-events:none}
+.c-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line2);font-size:13px}
+.c-head .dots{display:flex;gap:6px}
+.c-head .dots i{width:9px;height:9px;border-radius:50%;background:#262d40}
+.c-head b{font-weight:700;letter-spacing:.04em}
+.c-head .live{margin-left:auto;display:flex;align-items:center;gap:8px;font:500 10.5px/1 var(--mono);letter-spacing:.16em;color:#7ee8b4}
+.c-head .live i{width:7px;height:7px;border-radius:50%;background:#3ddc97;box-shadow:0 0 10px #3ddc97;animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+.lane{display:grid;grid-template-columns:112px 1fr 118px;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line2)}
+.who{display:flex;align-items:center;gap:10px}
+.av{position:relative;flex:none;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(77,123,255,.35),rgba(42,92,255,.12));border:1px solid rgba(142,171,255,.35)}
+.av img{width:22px}
+.av::after{content:"";position:absolute;right:-3px;bottom:-3px;width:10px;height:10px;border-radius:50%;background:#3ddc97;border:2px solid #0a0f1f}
+.who b{display:block;font-size:13.5px;line-height:1.2}
+.who span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.belt{position:relative;height:50px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.belt::before{content:"";position:absolute;left:0;right:0;top:17px;height:4px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(142,171,255,.4) 0 8px,transparent 8px 16px);background-size:16px 4px;animation:conv .6s linear infinite;opacity:.7}
+@keyframes conv{to{background-position:16px 0}}
+.st{position:absolute;top:11px;width:16px;height:16px;margin-left:-8px;border-radius:5px;background:#0b1226;border:1.5px solid rgba(142,171,255,.6);box-shadow:0 0 12px rgba(77,123,255,.5)}
+.st::after{content:attr(data-l);position:absolute;top:22px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;font-style:normal;color:var(--muted)}
+.job{position:absolute;top:7px;left:0;transform:translateX(-50%);padding:3px 9px;border-radius:8px;font-size:11px;line-height:1.5;white-space:nowrap;background:#17245a;border:1px solid rgba(142,171,255,.55);color:#e6ecff;box-shadow:0 6px 16px -6px rgba(77,123,255,.9);animation:travel var(--d,8s) linear infinite;opacity:0;z-index:1}
+.job.alt{animation-delay:calc(var(--d,8s) / -2)}
+@keyframes travel{0%{left:0;opacity:0}5%{opacity:1}14%{left:14%}26%{left:14%}44%{left:50%}56%{left:50%}74%{left:86%}86%{left:86%}95%{opacity:1}100%{left:100%;opacity:0}}
+.out{justify-self:end;display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:11.5px;white-space:nowrap;border:1px solid rgba(61,220,151,.35);background:rgba(61,220,151,.08);color:#9ff0c8}
+.out.h{border-color:rgba(255,195,92,.45);background:rgba(255,195,92,.1);color:#ffd58c}
+.out.flash{animation:pop .5s}
+@keyframes pop{30%{transform:scale(1.12)}}
+.c-foot{display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:12.5px;color:var(--ink2)}
+.c-foot i{width:8px;height:8px;border-radius:50%;background:#ffc35c;box-shadow:0 0 10px #ffc35c}
+.c-foot span{margin-left:auto;font:500 10.5px/1 var(--mono);letter-spacing:.14em;color:var(--dim)}
+
+/* roi */
+.roi-rows{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.012)}
+.roi-row{display:grid;grid-template-columns:150px 1fr 64px 1.5fr;align-items:center;gap:24px;padding:24px 32px;border-bottom:1px solid var(--line2);transition:background .3s}
+.roi-row:last-child{border-bottom:0}
+.roi-row:not(.th):hover{background:rgba(77,123,255,.05)}
+.roi-row.th{padding:14px 32px;font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--dim);background:rgba(255,255,255,.02)}
+.roi-row b{font-size:18px}
+.roi-row .was{color:var(--muted);font-size:15px}
+.roi-row .arr{position:relative;height:2px;background:rgba(142,171,255,.18);overflow:hidden}
+.roi-row .arr::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,#8eabff);animation:flowx 1.8s linear infinite}
+@keyframes flowx{to{left:100%}}
+.roi-row .now{font-size:15.5px;color:var(--ink2)}
+.gain{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gain div{padding:26px 28px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(77,123,255,.10),rgba(255,255,255,.01))}
+.gain small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--blue2)}
+.gain b{display:block;margin-top:12px;font-size:24px;font-weight:800}
+.gain span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
 
 /* marquee */
 .marquee{position:relative;border-block:1px solid var(--line2);padding:26px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
@@ -295,7 +318,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 /* responsive */
 @media (max-width:1080px){
   .hero .wrap{grid-template-columns:1fr}
-  .visual{max-width:460px;margin-top:20px}
+  .stage3d{margin-top:24px}
+  .console{transform:none!important}
+  .roi-row{grid-template-columns:120px 1fr 40px 1.3fr;padding:20px 22px}
   .bento{grid-template-columns:1fr 1fr}
   .tr{grid-template-columns:1fr}
   .mods{grid-template-columns:1fr 1fr}
@@ -341,13 +366,25 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .pipe{grid-template-columns:1fr 1fr}
   .caps{grid-template-columns:1fr}
   .caps .card:first-child{grid-column:auto}
-  .chip{font-size:11.5px;padding:8px 11px}
-  .chip.c2{right:-2%}
-  .scroll-hint{display:none}
+  .lane{grid-template-columns:40px 1fr;row-gap:6px;padding:14px}
+  .who>div:not(.av){display:none}
+  .c-foot span{display:none}
+  .c-foot strong{white-space:nowrap}
+  .pill i{display:none}
+  .pill{padding-left:14px}
+  .out{grid-column:2;justify-self:start}
+  .st::after{font-size:9.5px}
+  .roi-row{grid-template-columns:1fr;gap:8px;padding:20px}
+  .roi-row.th,.roi-row .arr{display:none}
+  .roi-row .was::before{content:"以前　";color:var(--dim)}
+  .roi-row .now::before{content:"现在　";color:var(--blue2);font-weight:600}
+  .gain{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
+  .job{opacity:1;left:50%}
+  .job.alt{display:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -360,9 +397,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="wrap">
     <a class="brand" href="#top" aria-label="觅咪科技 首页"><img src="assets/mimi-mark.svg" alt=""><div><b>觅咪科技</b><small>MIMI TECH</small></div></a>
     <nav class="links" id="links">
+      <a href="#roi">降本增效</a>
       <a href="#services">服务</a>
       <a href="#case">案例</a>
-      <a href="#growth">获客系统</a>
+      <a href="#growth">获客流水线</a>
       <a href="#method">方法</a>
       <a class="btn primary sm" href="#contact">预约咨询</a>
     </nav>
@@ -376,29 +414,44 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="grid-bg"></div>
   <div class="wrap">
     <div>
-      <div class="pill rv"><i>MIMI TECH</i>AI 咨询 · 企业培训 · 数字化转型</div>
-      <h1 class="rv d1">把 AI 变成<br>你公司的<br><span class="grad">工作系统</span>。</h1>
-      <p class="lead rv d2">觅咪科技为企业提供 <strong>AI 咨询</strong>、<strong>企业培训</strong>和<strong>数字化转型落地</strong>：先诊断哪里值得用 AI，再让团队会用，最后把系统搭起来、跑起来。</p>
+      <div class="pill rv"><i>MIMI TECH</i>降本增效 · AI 咨询 · 企业培训 · 数字化转型</div>
+      <h1 class="rv d1">降本增效，<br>交给<span class="grad nw">数字员工</span>。</h1>
+      <p class="lead rv d2">觅咪科技帮企业<strong>降本增效</strong>：把重复的流程交给 AI <strong>数字员工</strong>，人只做判断。从<strong>咨询诊断</strong>、<strong>团队培训</strong>到<strong>系统落地</strong>，一条线做到结果。</p>
       <div class="cta rv d3">
-        <a class="btn primary" href="#contact">预约 AI 落地诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn ghost" href="#services">看我们做什么</a>
+        <a class="btn primary" href="#contact">预约降本增效诊断<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn ghost" href="#roi">看数字员工怎么干活</a>
       </div>
       <div class="proof rv d4">
-        <div><b><em>SEO</em> 39→80</b><span>外贸官网改版前后</span></div>
-        <div><b><em>GEO</em> 38→73</b><span>AI 搜索可引用度</span></div>
-        <div><b>1→7</b><span>买家常问 9 题，能直接答的</span></div>
+        <div><b>3 <em>分钟</em></b><span>一批开发信发完</span></div>
+        <div><b>08:30</b><span>邮件日报自动送达</span></div>
+        <div><b><em>SEO</em> 39→80</b><span>官网改版前后</span></div>
       </div>
     </div>
-    <div class="visual" id="visual">
-      <canvas id="globe"></canvas>
-      <div class="orb"><div class="orb3d" id="orb3d">
-        <div class="ring r1"></div><div class="ring r2"></div>
-        <div class="lens"><img src="assets/mimi-mark.svg" alt="觅咪科技"></div>
-        <div class="chip c1"><span class="dot"></span>知识库客服 · <b>答案带出处</b></div>
-        <div class="chip c2"><span class="dot b"></span>达人建联 · <b>自动跟进</b></div>
-        <div class="chip c3"><span class="dot y"></span>谈到佣金 → <b>转人工</b></div>
-        <div class="chip c4"><span class="dot b"></span>宣传片 · <b>44.5 秒代码生成</b></div>
-      </div></div>
+    <div class="stage3d rv d2" id="stage3d">
+      <div class="console" id="console" aria-label="数字员工流水线示意">
+        <div class="c-head"><span class="dots"><i></i><i></i><i></i></span><b>数字员工 · 流水线</b><span class="live"><i></i>RUNNING · 示意</span></div>
+        <div class="lane" style="--d:7s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>客服专员</b><span>知识库客服</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="接收"></i><i class="st" style="left:50%" data-l="查知识库"></i><i class="st" style="left:86%" data-l="回复"></i><span class="job" data-out="已回复 · 带出处">询价：能定制吗</span><span class="job alt" data-out="转人工" data-h>佣金能给多少</span></div>
+          <span class="out">已回复 · 带出处</span>
+        </div>
+        <div class="lane" style="--d:8.4s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>获客专员</b><span>主动建联</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="导入名单"></i><i class="st" style="left:50%" data-l="打分 · 起草"></i><i class="st" style="left:86%" data-l="发信 · 跟进"></i><span class="job" data-out="已建联">TikTok 达人</span><span class="job alt" data-out="已发送 · 待回复">经销商名单</span></div>
+          <span class="out">已建联</span>
+        </div>
+        <div class="lane" style="--d:9.2s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>资料专员</b><span>邮件 · 日报</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="收件"></i><i class="st" style="left:50%" data-l="分类 · 摘要"></i><i class="st" style="left:86%" data-l="推送"></i><span class="job" data-out="08:30 日报已推送">今日邮件</span><span class="job alt" data-out="纪要已归档">会议录音</span></div>
+          <span class="out">08:30 日报已推送</span>
+        </div>
+        <div class="lane" style="--d:7.8s">
+          <div class="who"><div class="av"><img src="assets/mimi-mark.svg" alt=""></div><div><b>内容专员</b><span>视频 · 海报</span></div></div>
+          <div class="belt"><i class="st" style="left:14%" data-l="资料"></i><i class="st" style="left:50%" data-l="脚本 · 分镜"></i><i class="st" style="left:86%" data-l="成片"></i><span class="job" data-out="宣传片待审核" data-h>产品资料</span><span class="job alt" data-out="海报待审核" data-h>活动主题</span></div>
+          <span class="out h">宣传片待审核</span>
+        </div>
+        <div class="c-foot"><i></i>人只做判断：<strong>转人工 · 审核 · 拍板</strong><span>每个动作留记录</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -432,12 +485,36 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   </div>
 </div>
 
+<!-- ROI -->
+<section class="s" id="roi">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Cost &amp; Efficiency · 降本增效</span>
+      <h2>重复的活交给数字员工，<br><span class="grad">人只做判断</span>。</h2>
+      <p>先挑出最耗人的几个流程，算清三笔账：<strong>省多少时间</strong>、<strong>少出多少错</strong>、<strong>多接多少单</strong>，再动手。</p>
+    </div>
+    <div class="roi-rows rv">
+      <div class="roi-row th"><span>流程</span><span>以前</span><span></span><span>交给数字员工后</span></div>
+      <div class="roi-row"><b>邮件处理</b><span class="was">每天逐封看、手动回</span><i class="arr"></i><span class="now"><strong>每天 08:30 一份日报</strong>：分类、摘要、起草回复，人只点确认</span></div>
+      <div class="roi-row"><b>客户咨询</b><span class="was">等人有空才回，口径不一</span><i class="arr"></i><span class="now"><strong>7×24 按知识库回答</strong>，答案带出处；谈钱谈合同转人工</span></div>
+      <div class="roi-row"><b>开发信</b><span class="was">一封封复制、粘贴、改称呼</span><i class="arr"></i><span class="now">一批德语开发信 <strong>3 分钟发完</strong>，再逐封核对</span></div>
+      <div class="roi-row"><b>官网问答</b><span class="was">买家常问 9 题，只答得上 1 题</span><i class="arr"></i><span class="now">改版后<strong>能直接答 7 题</strong>，AI 搜索也能引用</span></div>
+      <div class="roi-row"><b>品牌宣传片</b><span class="was">外包拍摄、反复改稿</span><i class="arr"></i><span class="now"><strong>44.5 秒品牌片代码生成</strong>，画面和配乐不用拍、不用录</span></div>
+    </div>
+    <div class="gain">
+      <div class="rv"><small>01 · 省时间</small><b>重复动作交出去</b><span>整理、回复、发信、出日报</span></div>
+      <div class="rv d1"><small>02 · 少出错</small><b>每个答案有出处</b><span>数字对得上原文，缺的写「待确认」</span></div>
+      <div class="rv d2"><small>03 · 多接单</small><b>没人值班也有人回</b><span>线索不漏，跟进不断</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section class="s" id="services">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">What we do · 服务</span>
-      <h2>咨询、培训、落地，<br><span class="grad">一条线做到结果</span>。</h2>
+      <h2>咨询、培训、落地，<br>一条线做到<span class="grad">降本增效</span>。</h2>
       <p>先找准<strong>哪里值得用 AI</strong>，再让<strong>团队会用</strong>，最后把<strong>系统搭起来、跑起来</strong>，交到你手里。</p>
     </div>
 
@@ -473,15 +550,15 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="tr">
           <div>
             <span class="no">03 · TRANSFORMATION</span>
-            <h3>数字化转型 · 落地实施</h3>
-            <div class="for">把方案变成每天在跑的系统</div>
-            <p>我们来搭、来接、来调，<strong>跑稳了再交接给你的团队</strong>。每个系统都有护栏：<strong>关键决定留给人</strong>，每个动作留记录。</p>
+            <h3>数字化转型 · 数字员工上岗</h3>
+            <div class="for">把方案变成每天在跑的流水线</div>
+            <p>我们来搭、来接、来调，<strong>跑稳了再交接给你的团队</strong>。每条流水线都有护栏：<strong>关键决定留给人</strong>，每个动作留记录。</p>
             <div class="mods">
-              <a href="#growth"><b>知识库与智能客服</b><span>答案带出处，查不到转人工</span></a>
-              <a href="#growth"><b>AI 获客系统</b><span>达人与 B 端主动建联、自动跟进</span></a>
+              <a href="#growth"><b>客服数字员工</b><span>按知识库回答，查不到转人工</span></a>
+              <a href="#growth"><b>获客数字员工</b><span>达人与 B 端主动建联、自动跟进</span></a>
               <a href="#case"><b>官网与 GEO/SEO</b><span>搜得到你，AI 也答得出你</span></a>
-              <a href="#case"><b>AI 内容生产</b><span>宣传片、数字人口播、海报</span></a>
-              <a href="#growth"><b>流程自动化</b><span>邮件日报、资料归档、批量发信</span></a>
+              <a href="#case"><b>内容数字员工</b><span>宣传片、数字人口播、海报</span></a>
+              <a href="#roi"><b>资料数字员工</b><span>邮件日报、资料归档、批量发信</span></a>
               <a href="#method"><b>交接与迭代</b><span>写清交接，每周补一次</span></a>
             </div>
           </div>
@@ -547,8 +624,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <section class="s growth" id="growth">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Growth Engine · 获客系统</span>
-      <h2>从找到客户到成交，<br><span class="grad">一条线交给 AI 跑</span>。</h2>
+      <span class="eyebrow">Growth Pipeline · 获客流水线</span>
+      <h2>获客流水线：<br><span class="grad">从找到客户到成交</span>。</h2>
       <p>网站和内容负责<strong>被找到</strong>，AI 负责<strong>主动找、接得住、跟到底</strong>；人只在<strong>报价、合同、收款</strong>时出手。</p>
     </div>
 
@@ -640,7 +717,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <div class="wrap">
     <img class="big rv" src="assets/mimi-mark.svg" alt="">
     <h2 class="rv d1">先聊一件<br><span class="grad">你最耗时的工作</span>。</h2>
-    <p class="rv d2">30 分钟 AI 落地诊断：告诉我们你的行业和最头疼的一个环节，我们给你<strong>值不值得做</strong>、<strong>怎么做</strong>和<strong>第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
+    <p class="rv d2">30 分钟降本增效诊断：告诉我们你的行业和最耗人的一个流程，我们给你<strong>值不值得做</strong>、<strong>能省在哪</strong>和<strong>第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
     <div class="ways">
       <div class="rv"><small>微信</small><b data-todo>待填写</b></div>
       <div class="rv d1"><small>邮箱</small><b data-todo>待填写</b></div>
@@ -728,46 +805,18 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); tick(); } }).observe($('#chat'));
   }
 
-  const visual = $('#visual'), orb = $('#orb3d'), cv = $('#globe'), ctx = cv.getContext('2d');
-  const N = 1100, pts = [];
-  for (let i = 0; i < N; i++) {
-    const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = i * 2.39996323;
-    pts.push([Math.cos(th) * r, y, Math.sin(th) * r]);
-  }
-  let W = 0, H = 0, dpr = 1, rotY = 0, tx = 0, ty = 0, mx = 0, my = 0, live = true;
-  const size = () => {
-    dpr = Math.min(devicePixelRatio || 1, 2);
-    W = cv.clientWidth; H = cv.clientHeight;
-    cv.width = W * dpr; cv.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  };
-  new ResizeObserver(size).observe(cv); size();
-  visual.addEventListener('pointermove', e => {
-    const r = visual.getBoundingClientRect();
-    mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5;
-    orb.style.transform = `rotateY(${mx * 18}deg) rotateX(${-my * 18}deg)`;
+  const stage = $('#stage3d'), con = $('#console');
+  stage.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    con.style.transform = `rotateY(${-9 + x * 10}deg) rotateX(${5 - y * 8}deg)`;
   });
-  visual.addEventListener('pointerleave', () => { mx = my = 0; orb.style.transform = ''; });
-  new IntersectionObserver(es => live = es[0].isIntersecting).observe(visual);
-  const draw = () => {
-    if (live && W) {
-      rotY += reduce ? 0 : .0024; tx += (my * .6 - tx) * .05; ty += (mx * .9 - ty) * .05;
-      const ay = rotY + ty, ax = .32 + tx, cy = Math.cos(ay), sy = Math.sin(ay), cx = Math.cos(ax), sx = Math.sin(ax);
-      const R = Math.min(W, H) * .4, ox = W / 2, oy = H / 2;
-      ctx.clearRect(0, 0, W, H);
-      for (const [x, y, z] of pts) {
-        const x1 = x * cy - z * sy, z1 = x * sy + z * cy, y1 = y * cx - z1 * sx, z2 = y * sx + z1 * cx;
-        const p = 2.6 / (2.6 + z2), d = (1 - z2) / 2;
-        ctx.globalAlpha = .08 + d * .72;
-        ctx.fillStyle = d > .62 ? '#b9cbff' : '#4d7bff';
-        const s = (.5 + d * 1.5) * p;
-        ctx.fillRect(ox + x1 * R * p - s / 2, oy + y1 * R * p - s / 2, s, s);
-      }
-      ctx.globalAlpha = 1;
-    }
-    if (!reduce) requestAnimationFrame(draw);
-  };
-  draw();
+  stage.addEventListener('pointerleave', () => con.style.transform = '');
+  $$('.job').forEach(j => j.addEventListener('animationiteration', () => {
+    const o = j.closest('.lane').querySelector('.out');
+    o.textContent = j.dataset.out;
+    o.classList.toggle('h', 'h' in j.dataset);
+    o.classList.remove('flash'); void o.offsetWidth; o.classList.add('flash');
+  }));
 })();
 </script>
 </body>
