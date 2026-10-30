@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","knowsAbout":["AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
+{"@context":"https://schema.org","@type":"Organization","name":"觅咪科技","alternateName":"MIMI TECH","logo":"assets/mimi-mark-1024.png","description":"企业 AI 咨询、企业培训与数字化转型落地服务。","telephone":"+86-186-5536-9985","knowsAbout":["AI 咨询","企业 AI 培训","数字化转型","知识库与智能客服","GEO","SEO"]}
 </script>
 <style>
 :root{
@@ -301,11 +301,13 @@ section.s{position:relative;padding:140px 0}
 .contact img.big{width:96px;margin:0 auto 34px;filter:drop-shadow(0 10px 40px rgba(77,123,255,.8))}
 .contact h2{font-size:clamp(38px,5.4vw,72px);line-height:1.12;font-weight:900;letter-spacing:-.02em}
 .contact p{margin:24px auto 0;max-width:620px;font-size:18px;color:var(--ink2)}
-.ways{margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;text-align:left}
+.ways{margin:48px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:600px;text-align:left}
 .ways div{padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,18,.6);backdrop-filter:blur(10px)}
 .ways small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--muted)}
 .ways b{display:block;margin-top:10px;font-size:17px;word-break:break-all}
-.ways b[data-todo]{color:var(--dim)}
+.ways b a{color:inherit}
+.ways b a:hover{color:#fff}
+.ways .same{margin-left:10px;font-size:13px;font-weight:500;color:var(--muted)}
 
 footer{border-top:1px solid var(--line2);padding:36px 0;font-size:13px;color:var(--dim)}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -720,9 +722,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <h2 class="rv d1">先聊一件<br><span class="grad">你最耗时的工作</span>。</h2>
     <p class="rv d2">30 分钟降本增效诊断：告诉我们你的行业和最耗人的一个流程，我们给你<strong>值不值得做</strong>、<strong>能省在哪</strong>和<strong>第一步做什么</strong>。咨询、内训、落地都可以从这里开始。</p>
     <div class="ways">
-      <div class="rv"><small>微信</small><b data-todo>待填写</b></div>
-      <div class="rv d1"><small>邮箱</small><b data-todo>待填写</b></div>
-      <div class="rv d2"><small>电话</small><b data-todo>待填写</b></div>
+      <div class="rv"><small>电话</small><b><a href="tel:+8618655369985">186 5536 9985</a></b></div>
+      <div class="rv d1"><small>微信</small><b>186 5536 9985<span class="same">同手机号</span></b></div>
     </div>
   </div>
 </section>
