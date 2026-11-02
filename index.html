@@ -221,7 +221,7 @@ section.s{position:relative;padding:140px 0}
 /* case */
 .case{background:radial-gradient(1000px 600px at 20% 0%,rgba(42,92,255,.12),transparent 60%)}
 .case-top{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch}
-.compare{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/900;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 40px 100px -40px rgba(42,92,255,.5)}
+.compare{align-self:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/900;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 40px 100px -40px rgba(42,92,255,.5)}
 .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .compare .before{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
 .compare .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 20px rgba(142,171,255,.9)}
@@ -230,7 +230,7 @@ section.s{position:relative;padding:140px 0}
 .compare .tag.l{left:16px;color:#ff9a9a}
 .compare .tag.r{right:16px;color:#7ee8b4}
 .case-side{display:flex;flex-direction:column;gap:18px}
-.case-side .card{padding:30px;flex:1}
+.case-side .card{padding:30px;flex:1 0 auto}
 .case-side h3{font-size:24px}
 .bad,.good{display:grid;gap:8px;margin-top:16px;font-size:14.5px}
 .bad li,.good li{display:flex;gap:10px;color:var(--ink2)}
@@ -251,6 +251,11 @@ section.s{position:relative;padding:140px 0}
 .film p{margin-top:14px;color:var(--ink2);font-size:16px}
 .film .kv{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
 .film .kv span{font:500 12px/1 var(--mono);padding:8px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink2)}
+.after{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.after div{padding:26px 28px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.after small{font:500 11px/1 var(--mono);letter-spacing:.16em;color:var(--blue2)}
+.after b{display:block;margin-top:14px;font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.after span{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
 .foot-note{margin-top:22px;font-size:12.5px;color:var(--dim)}
 .foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
 
@@ -422,7 +427,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .card{padding:26px}
   .card h3{font-size:24px}
   .days{grid-template-columns:1fr 1fr}
-  .metrics{grid-template-columns:1fr}
+  .metrics,.after{grid-template-columns:1fr}
   .metric b{font-size:38px}
   .method{grid-template-columns:1fr}
   .method div{border-right:0;border-bottom:1px solid var(--line)}
@@ -495,7 +500,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div class="proof rv d4">
         <div><b>7×24</b><span>客户咨询按知识库回复</span></div>
         <div><b>08:30</b><span>邮件日报自动送达</span></div>
-        <div><b><em>SEO</em> 39→80</b><span>官网改版前后</span></div>
+        <div><b><em>SEO</em> 39→89</b><span>官网改版前后</span></div>
       </div>
     </div>
     <div class="stage3d rv d2" id="stage3d">
@@ -569,7 +574,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div class="roi-row"><b>邮件处理</b><span class="was">每天逐封看、手动回</span><i class="arr"></i><span class="now"><strong>每天 08:30 一份日报</strong>：分类、摘要、起草回复，人只点确认</span></div>
       <div class="roi-row"><b>客户咨询</b><span class="was">等人有空才回，口径不一</span><i class="arr"></i><span class="now"><strong>7×24 按知识库回答</strong>，答案带出处；谈钱谈合同转人工</span></div>
       <div class="roi-row"><b>潜在客户开发</b><span class="was">想定制只能一封封手写，一天写不了几封</span><i class="arr"></i><span class="now"><strong>批量定制化投放</strong>：按市场和语言，每封写对称呼、产品和卖点</span></div>
-      <div class="roi-row"><b>官网问答</b><span class="was">买家常问 9 题，只答得上 1 题</span><i class="arr"></i><span class="now">改版后<strong>能直接答 7 题</strong>，AI 搜索也能引用</span></div>
+      <div class="roi-row"><b>官网问答</b><span class="was">买家常问 9 题，只答得上 1 题</span><i class="arr"></i><span class="now">现在<strong>9 题都能直接答</strong>，AI 搜索也能引用</span></div>
       <div class="roi-row"><b>品牌宣传片</b><span class="was">外包拍摄、反复改稿</span><i class="arr"></i><span class="now"><strong>44.5 秒品牌片代码生成</strong>，画面和配乐不用拍、不用录</span></div>
     </div>
     <div class="gain">
@@ -666,15 +671,21 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       </div>
       <div class="case-side">
         <div class="card rv d1"><h3>优化前</h3><ul class="bad"><li>一打开就弹表单，看不到产品</li><li>标题只有公司中文名</li><li>H1 是「Questions or Consulting」</li></ul></div>
-        <div class="card rv d2"><h3>优化后</h3><ul class="good"><li>首屏就是产品和 4 个型号</li><li>标题写清品牌与品类</li><li>首屏下方嵌入宣传片</li><li>9 种语言，阿拉伯语从右往左排</li></ul></div>
+        <div class="card rv d2"><h3>优化后</h3><ul class="good"><li>首屏就是产品和 4 个型号</li><li>每个型号一个页面，带参数表</li><li>3 篇买家指南：选型、帐篷安装、OEM 定制</li><li>9 种语言，阿拉伯语从右往左排</li></ul></div>
       </div>
     </div>
 
     <div class="metrics">
-      <div class="metric hl rv"><small>SEO 评分</small><b><s>39</s><span class="cnt" data-to="80">80</span></b><span>标题、结构、收录、移动端</span></div>
-      <div class="metric hl rv d1"><small>GEO 评分</small><b><s>38</s><span class="cnt" data-to="73">73</span></b><span>AI 搜索能不能正确引用</span></div>
+      <div class="metric hl rv"><small>SEO 评分</small><b><s>39</s><span class="cnt" data-to="89">89</span></b><span>上线时 80，补型号页和指南后 89</span></div>
+      <div class="metric hl rv d1"><small>GEO 评分</small><b><s>38</s><span class="cnt" data-to="91">91</span></b><span>上线时 73，补参数和认证后 91</span></div>
       <div class="metric rv d2"><small>Lighthouse SEO</small><b><s>77</s><span class="cnt" data-to="100">100</span></b><span>手机端性能 29 → 68</span></div>
-      <div class="metric rv d3"><small>买家常问 9 题</small><b><s>1</s><span class="cnt" data-to="7">7</span></b><span>网站能直接答上的题数</span></div>
+      <div class="metric rv d3"><small>买家常问 9 题</small><b><s>1</s><span class="cnt" data-to="9">9</span></b><span>制冷量、认证两题也补上了</span></div>
+    </div>
+
+    <div class="after">
+      <div class="rv"><small>AI 爬虫 · 上线统计后 2 天</small><b>92 次</b><span>Amazonbot 34 · ClaudeBot 28 · GPTBot 25 · OAI-SearchBot 5，已剔除我们自己的检测</span></div>
+      <div class="rv d1"><small>搜索引擎 · 新页面收录</small><b>几分钟</b><span>型号页提交 Bing 后几分钟就被抓取；两天内 bingbot 来了 38 次</span></div>
+      <div class="rv d2"><small>AI 问答 · 每周复测</small><b>12 / 12</b><span>问 Perplexity、DeepSeek：带品牌名的问题都能答出 HAFYOUNG；不带品牌的品类题还是 0 / 27，下一步做站外平台</span></div>
     </div>
 
     <div class="film">
@@ -687,7 +698,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <a class="btn ghost" style="margin-top:28px" href="https://www.hafyoung-cooling.com" target="_blank" rel="noopener">访问上线官网<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
     </div>
-    <p class="foot-note">评分表为自拟，两轮用同一张表，只看前后变化（审计 2026.10.27）。另有 26 个旧网址全部 301 跳转到新站对应型号，收录不丢。</p>
+    <p class="foot-note">评分表为自拟，三轮用同一张表，只看前后变化（旧站与上线审计 2026.10.27，复评 2026.11.02）；Lighthouse 为 10.27 实测。另有 26 个旧网址全部 301 跳转到新站对应型号，收录不丢。</p>
   </div>
 </section>
 
