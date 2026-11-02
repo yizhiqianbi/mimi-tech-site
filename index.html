@@ -256,6 +256,9 @@ section.s{position:relative;padding:140px 0}
 .after small{font:500 11px/1 var(--mono);letter-spacing:.16em;color:var(--blue2)}
 .after b{display:block;margin-top:14px;font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1}
 .after span{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.after .hit{grid-column:1/-1;border-color:rgba(88,224,160,.35);background:linear-gradient(160deg,rgba(88,224,160,.12),rgba(255,255,255,.01))}
+.after .hit small{color:#7ee8b4}
+.after .hit span{font-size:15px;color:var(--ink2);max-width:860px}
 .foot-note{margin-top:22px;font-size:12.5px;color:var(--dim)}
 .foot-note a{color:var(--blue2);border-bottom:1px solid rgba(142,171,255,.35)}
 
@@ -683,8 +686,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     </div>
 
     <div class="after">
-      <div class="rv"><small>AI 爬虫 · 上线统计后 2 天</small><b>92 次</b><span>Amazonbot 34 · ClaudeBot 28 · GPTBot 25 · OAI-SearchBot 5，已剔除我们自己的检测</span></div>
-      <div class="rv d1"><small>搜索引擎 · 新页面收录</small><b>几分钟</b><span>型号页提交 Bing 后几分钟就被抓取；两天内 bingbot 来了 38 次</span></div>
+      <div class="rv hit"><small>第一条海外询盘 · 上线 15 小时</small><b>15 小时</b><span>11/01 19:54 型号页和买家指南上线；次日 11:03 一位新加坡买家在阿拉伯语页点了询价，12:37 回到首页提交询盘表单，企业确认是真实买家。来源记为直接访问，统计看不出是不是 AI 推荐来的。</span></div>
+      <div class="rv"><small>AI 爬虫 · 统计开通 2 天</small><b>95 次</b><span>Amazonbot 34 · ClaudeBot 30 · GPTBot 25 · OAI-SearchBot 6；GPTBot 把 4 个型号页和 3 篇指南都读了，已剔除我们自己的检测</span></div>
+      <div class="rv d1"><small>搜索引擎 · 新页面收录</small><b>几分钟</b><span>型号页提交 Bing 后几分钟就被抓取；两天内 bingbot 来了 44 次</span></div>
       <div class="rv d2"><small>AI 问答 · 每周复测</small><b>12 / 12</b><span>问 Perplexity、DeepSeek：带品牌名的问题都能答出 HAFYOUNG；不带品牌的品类题还是 0 / 27，下一步做站外平台</span></div>
     </div>
 
